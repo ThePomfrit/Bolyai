@@ -578,7 +578,7 @@ cout << atlag << "\t" << plusz3Atlag << "\t" << per4Atlag << "\t" << egyPerAtlag
  </summary>
 
 ```c++
-
+int a[40];
 ```
 
 </details>
@@ -587,7 +587,12 @@ cout << atlag << "\t" << plusz3Atlag << "\t" << per4Atlag << "\t" << egyPerAtlag
  </summary>
 
 ```c++
-
+int ind = 0;
+srand(time(0));
+do {
+    a[ind] = rand() % 31 + 10;
+    ind++;
+} while (a[ind - 1] != 17 && ind < 40);
 ```
 
 </details>
@@ -596,7 +601,12 @@ cout << atlag << "\t" << plusz3Atlag << "\t" << per4Atlag << "\t" << egyPerAtlag
  </summary>
 
 ```c++
-
+// A feladatbol ugy ertem, hogy a 17 mar ne szamitson "hasznosnak".
+// Igy a 17 valojaban benne van a tombben, de nem szamit a hasznosok hoze.
+// A ciklusbol kilepest megcsinaltuk a 2. alfeladatban.
+if(a[ind - 1] == 17) {
+    ind--;
+}
 ```
 
 </details>
@@ -605,6 +615,7 @@ cout << atlag << "\t" << plusz3Atlag << "\t" << per4Atlag << "\t" << egyPerAtlag
  </summary>
 
 ```c++
+cout << "A tombben " << ind << " hasznos elem van." << endl;
 
 ```
 
@@ -614,7 +625,14 @@ cout << atlag << "\t" << plusz3Atlag << "\t" << per4Atlag << "\t" << egyPerAtlag
  </summary>
 
 ```c++
-
+cout << endl;
+for(int i = 0; i < ind; i++) {
+    cout << a[i] << " ";
+    if(i % 8 == 7) {
+        cout << endl;
+    }
+}
+cout << endl;
 ```
 
 </details>
@@ -623,7 +641,12 @@ cout << atlag << "\t" << plusz3Atlag << "\t" << per4Atlag << "\t" << egyPerAtlag
  </summary>
 
 ```c++
-
+//a 10es indexu mar a 11. elem
+if(ind >= 11) {
+    int csere = a[10];
+    a[10] = a[0];
+    a[0] = csere;
+}
 ```
 
 </details>
@@ -632,7 +655,14 @@ cout << atlag << "\t" << plusz3Atlag << "\t" << per4Atlag << "\t" << egyPerAtlag
  </summary>
 
 ```c++
-
+cout << endl;
+for(int i = 0; i < ind; i++) {
+    cout << a[i] << " ";
+    if(i % 8 == 7) {
+        cout << endl;
+    }
+}
+cout << endl;
 ```
 
 </details>
@@ -641,7 +671,11 @@ cout << atlag << "\t" << plusz3Atlag << "\t" << per4Atlag << "\t" << egyPerAtlag
  </summary>
 
 ```c++
-
+for(int i = 0; i < ind; i++) {
+    if(a[i] % 2 == 0) {
+        a[i] /= 2;
+    }
+}
 ```
 
 </details>
@@ -650,7 +684,14 @@ cout << atlag << "\t" << plusz3Atlag << "\t" << per4Atlag << "\t" << egyPerAtlag
  </summary>
 
 ```c++
-
+cout << endl;
+for(int i = 0; i < ind; i++) {
+    cout << a[i] << " ";
+    if(i % 8 == 7) {
+        cout << endl;
+    }
+}
+cout << endl;
 ```
 
 </details>
@@ -659,7 +700,11 @@ cout << atlag << "\t" << plusz3Atlag << "\t" << per4Atlag << "\t" << egyPerAtlag
  </summary>
 
 ```c++
-
+for(int i = 0; i < ind; i++) {
+    if(i % 2 == 1) {
+        a[i] += 10;
+    }
+}
 ```
 
 </details>
@@ -668,7 +713,14 @@ cout << atlag << "\t" << plusz3Atlag << "\t" << per4Atlag << "\t" << egyPerAtlag
  </summary>
 
 ```c++
-
+cout << endl;
+for(int i = 0; i < ind; i++) {
+    cout << a[i] << " ";
+    if(i % 5 == 4) {
+        cout << endl;
+    }
+}
+cout << endl;
 ```
 
 </details>
@@ -677,7 +729,11 @@ cout << atlag << "\t" << plusz3Atlag << "\t" << per4Atlag << "\t" << egyPerAtlag
  </summary>
 
 ```c++
-
+for (int i = 0; i < ind; i++) {
+    if(a[i] % 10 == 0) {
+        a[i] -= 7;
+    }
+}
 ```
 
 </details>
@@ -686,7 +742,14 @@ cout << atlag << "\t" << plusz3Atlag << "\t" << per4Atlag << "\t" << egyPerAtlag
  </summary>
 
 ```c++
-
+cout << endl;
+for(int i = 0; i < ind; i++) {
+    cout << a[i] << " ";
+    if(i % 4 == 3) {
+        cout << endl;
+    }
+}
+cout << endl;
 ```
 
 </details>
@@ -695,6 +758,17 @@ cout << atlag << "\t" << plusz3Atlag << "\t" << per4Atlag << "\t" << egyPerAtlag
  </summary>
 
 ```c++
+int paratlanOsszeg = 0;
+int paratlanDB = 0;
+for(int i = 0; i < ind; i++) {
+    if(a[i] % 2 == 1) {
+        paratlanOsszeg += a[i];
+        paratlanDB++;
+    }
+}
+double paratlanAtlag = paratlanOsszeg * 1.00 / paratlanDB;
+cout << "A paratlan szamok osszege: " << paratlanOsszeg << endl;
+cout << "A paratlan szamok atlaga: " << paratlanAtlag << endl;
 
 ```
 
@@ -704,7 +778,18 @@ cout << atlag << "\t" << plusz3Atlag << "\t" << per4Atlag << "\t" << egyPerAtlag
  </summary>
 
 ```c++
-
+int legkisebb = a[0];
+int legnagyobb = a[0];
+for(int i = 1; i < ind; i++) {
+    if(a[i] < legkisebb) {
+        legkisebb = a[i];
+    }
+    if(a[i] > legnagyobb) {
+        legnagyobb = a[i];
+    }
+}
+cout << "A legkisebb elem: " << legkisebb << endl;
+cout << "A legnagyobb elem: " << legnagyobb << endl;
 ```
 
 </details>
@@ -714,148 +799,213 @@ cout << atlag << "\t" << plusz3Atlag << "\t" << per4Atlag << "\t" << egyPerAtlag
 
 ## FÜGGVÉNYEK
 
-<details> <summary> 1. Hozz létre egy 40 elemű tömböt és töltsd fel véletlen egész számokkal a [0,100] intervallumból, 0 végjelig!  Jegyezd meg egy változóban az elemek számát!
- </summary>
+<details> <summary> 1. Hozz létre egy 40 elemű tömböt és töltsd fel véletlen egész számokkal a [0,100] intervallumból, 0 végjelig!  Jegyezd meg egy változóban az elemek számát! </summary>
 
 ```c++
+int a[40];
+int indA = 0;
+srand(time(0));
+do {
+    a[indA] = rand() % 101;
+    indA++;
+} while (a[indA - 1] != 0 && indA < 40);
+```
+
+</details>
+
+<details> <summary> 2. Hozz létre egy 25 elemű tömböt és töltsd fel véletlen egész számokkal a [10,40] intervallumból, 30 végjelig! Jegyezd meg egy változóban az elemek számát! </summary>
+
+```c++
+int b[25];
+int indB = 0;
+srand(time(0));
+do {
+    b[indB] = rand() % 31 + 10;
+    indB++;
+} while (b[indB - 1] != 30 && indB < 25);
+```
+
+</details>
+
+<details> <summary> 3. Írj függvényt, ami a tömb elemeit kiírja egymás alá! </summary>
+
+```c++
+void kiir1(int *a, int n) {
+    for(int i = 0; i < n; i++) {
+        cout << a[i] << endl;
+    }
+    //habar nem resze a feladatnak, sokkal atlathatobb lesz a kiiras, ha elvalasztjuk
+    cout << "--------------------------------" << endl;
+}
+```
+
+</details>
+
+<details> <summary> 4. Írasd ki mindkét tömböt az új függvénnyel! </summary>
+
+```c++
+cout << "Az elso tomb: " << endl;
+kiir1(a, indA);
+cout << "A masodik tomb: " << endl;
+kiir1(b, indB);
+```
+
+</details>
+
+<details> <summary> 5. Írj függvényt, ami az elemeket egymás mellé írja ki, szóközzel elválasztva! </summary>
+
+```c++
+void kiir2(int *a, int n) {
+    for(int i = 0; i < n; i++) {
+        cout << a[i] << " ";
+    }
+    cout << "\n--------------------------------" << endl;
+}
+```
+
+</details>
+
+<details> <summary> 6. Írasd ki mindkét tömböt ezzel a függvénnyel is! </summary>
+
+```c++
+cout << "Az elso tomb: " << endl;
+kiir2(a, indA);
+cout << "A masodik tomb: " << endl;
+kiir2(b, indB);
+```
+
+</details>
+
+<details> <summary> 7. Írj függvényt, ami 5 oszlopba írja ki egy tömb elemeit! </summary>
+
+```c++
+void kiir3(int *a, int n) {
+    for(int i = 0; i < n; i++) {
+        cout << a[i] << " ";
+        if(i % 5 == 4) {
+            cout << endl;
+        }
+    }
+    cout << "\n--------------------------------" << endl;
+}
+```
+
+</details>
+
+<details> <summary> 8. Írasd ki mindkét tömböt ezzel a függvénnyel is! </summary>
+
+```c++
+cout << "Az elso tomb: " << endl;
+kiir3(a, indA);
+cout << "A masodik tomb: " << endl;
+kiir3(b, indB);
 
 ```
 
 </details>
 
-<details> <summary> 2. Hozz létre egy 25 elemű tömböt és töltsd fel véletlen egész számokkal a [10,40] intervallumból, 30 végjelig! Jegyezd meg egy változóban az elemek számát!  
- </summary>
+<details> <summary> 9. Állapítsd meg, hogy melyik tömbben van kevesebb elem, és írasd ki, hogy mennyi! </summary>
 
 ```c++
-
+if(indA > indB) {
+    cout << "A masodik tombben van kevesebb elem, ami " << indB << " db." << endl;
+} else if(indA < indB) {
+    cout << "Az elso tombben van kevesebb elem, ami " << indA << " db." << endl;
+} else {
+    cout << "A ket tombben ugyanannyi elem van, ami " << indA << " db." << endl;
+}
 ```
 
 </details>
 
-<details> <summary> 3. Írj függvényt, ami a tömb elemeit kiírja egymás alá!
-
- </summary>
- 
+<details> <summary> 10. Hozz létre egy új, 40 elemű tömböt! </summary>
 
 ```c++
-
+int ossz[40];
 ```
 
 </details>
 
-<details> <summary> 4. Írasd ki mindkét tömböt az új függvénnyel!
- </summary>
+<details> <summary> 11. Ebbe az új tömbbe helyezd el a számok összegét a két eredeti tömbből! Ha az egyik tömbből kifogytak az elemek, akkor már csak másold át az elemeket! </summary>
 
 ```c++
-
+//ameddig mindkettoben vannak elemek, addig az osszeguk kell
+for(int i = 0; i < (min(indA, indB)); i++) {
+    ossz[i] = a[i] + b[i];
+}
+//amikor mar az egyikbol elfogyott, akkor csak atadjuk a tobbi elemet
+for(int i = min(indA, indB); i < max(indA, indB); i++) {
+    if(indA > indB) {
+        ossz[i] = a[i];
+    } else {
+        ossz[i] = b[i];
+    }
+}
 ```
 
 </details>
 
-<details> <summary> 5. Írj függvényt, ami az elemeket egymás mellé írja ki, szóközzel elválasztva!
- </summary>
+<details> <summary> 12. Írasd ki az új tömb elemeit függvénnyel 5 oszlopba! </summary>
 
 ```c++
-
+cout << "Az osszeg tomb: " << endl;
+kiir3(ossz, max(indA, indB));
 ```
 
 </details>
 
-<details> <summary> 6. Írasd ki mindkét tömböt ezzel a függvénnyel is!
- </summary>
+<details> <summary> 13. Írj függvényt, ami kiválasztja a tömb legkisebb elemét! </summary>
 
 ```c++
-
+int kis(int *a, int n) {
+    int min = a[0];
+    for(int i = 1; i < n; i++) {
+        if(a[i] < min) {
+            min = a[i];
+        }
+    }
+    return min;
+}
 ```
 
 </details>
 
-<details> <summary> 7. Írj függvényt, ami 5 oszlopba írja ki egy tömb elemeit!
- </summary>
+<details> <summary> 14. A főprogramból hívd meg ezt a függvényt, és írasd ki a legkisebb elem értékét, mindhárom tömbből! A függvényhívások eredményét helyezd változóba! </summary>
 
 ```c++
-
+int kisA = kis(a, indA);
+int kisB = kis(b, indB);
+int kisOsszeg = kis(ossz, max(indA, indB));
+cout << "Az elso tomb legkisebb eleme: " << kisA << endl;
+cout << "A masodik tomb legkisebb eleme: " << kisB << endl;
+cout << "Az osszeg tomb legkisebb eleme: " << kisOsszeg << endl;
 ```
 
 </details>
 
-<details> <summary> 8. Írasd ki mindkét tömböt ezzel a függvénnyel is!
- </summary>
+<details> <summary> 15. Írj függvényt, ami kiszámítja a tömbben lévő számok összegét! </summary>
 
 ```c++
-
+int osszeg (int *a, int n) {
+    int sum = 0;
+    for(int i = 0; i < n; i++) {
+        sum += a[i];
+    }
+    return sum;
+}
 ```
 
 </details>
 
-<details> <summary> 9. Állapítsd meg, hogy melyik tömbben van kevesebb elem, és írasd ki, hogy mennyi!
- </summary>
+<details> <summary> 16. A főprogramból hívd meg a függvényt és írasd ki mindhárom tömb alapján az elemek összegét! A függvényhívások eredményét helyezd változóba! </summary>
 
 ```c++
-
-```
-
-</details>
-
-<details> <summary> 10. Hozz létre egy új, 40 elemű tömböt!
- </summary>
-
-```c++
-
-```
-
-</details>
-
-<details> <summary> 11. Ebbe az új tömbbe helyezd el a számok összegét a két eredeti tömbből! Ha az egyik tömbből kifogytak az elemek, akkor már csak másold át az elemeket!
- </summary>
-
-```c++
-
-```
-
-</details>
-
-<details> <summary> 12. Írasd ki az új tömb elemeit függvénnyel 5 oszlopba!
- </summary>
-
-```c++
-
-```
-
-</details>
-
-<details> <summary> 13. Írj függvényt, ami kiválasztja a tömb legkisebb elemét!
- </summary>
-
-```c++
-
-```
-
-</details>
-
-<details> <summary> 14. A főprogramból hívd meg ezt a függvényt, és írasd ki a legkisebb elem értékét, mindhárom tömbből! A függvényhívások eredményét helyezd változóba!
- </summary>
-
-```c++
-
-```
-
-</details>
-
-<details> <summary> 15. Írj függvényt, ami kiszámítja a tömbben lévő számok összegét!
- </summary>
-
-```c++
-
-```
-
-</details>
-
-<details> <summary> 16. A főprogramból hívd meg a függvényt és írasd ki mindhárom tömb alapján az elemek összegét! A függvényhívások eredményét helyezd változóba!
- </summary>
-
-```c++
-
+int osszA = osszeg(a, indA);
+int osszB = osszeg(b, indB);
+int osszOsszeg = osszeg(ossz, max(indA, indB));
+cout << "Az elso tomb osszege: " << osszA << endl;
+cout << "A masodik tomb osszege: " << osszB << endl;
+cout << "Az osszeg tomb osszege: " << osszOsszeg << endl;
 ```
 
 </details>

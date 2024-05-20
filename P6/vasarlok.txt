@@ -1,0 +1,31 @@
+Mari 1584 2003
+Vilmos 632 2015
+Teri 1200 1978
+Sanyi 3548 1999
+Rezso 3636 1992
+Panna 3528 2013
+
+
+
+Mari 1584 2003
+
+fstream f;
+string sor;
+getline(f, sor);
+
+eleje = 0
+int vege = sor.find(" ",eleje);
+string a = sor.substr(eleje, vege);
+//int a1 = stoi(a);
+
+
+eleje = vege + 1;
+vege = sor.find("\n", eleje);
+string b = sor.substr(eleje, vege);
+//int b1 = stoi(a);
+
+
+
+int i = 0; i < 20; i++
+
+cout << a[ind].nev << "\t" << a[ind].penz << "\t" << a[int].ev << endl;

@@ -462,7 +462,7 @@ Q P R
 
 ### F feladat
 
-<details> <summary> 1. Egy tizedes számokból álló tömb kezdőértéke legyen a következő: `{5.2, 3.4, 11, 21.3, 31.1, 0, 19.1, 10.3}`.
+<details> <summary> 1. Egy tizedes számokból álló tömb kezdőértéke legyen a következő: {5.2, 3.4, 11, 21.3, 31.1, 0, 19.1, 10.3}.
  </summary>
 
 ```c++
@@ -514,7 +514,7 @@ for(int i = 0; i < 8; i++) {
 
 </details>
 
-<details> <summary> 6. Az `1/x` oszlopnál ügyelj a `0`-val végzett osztásra!
+<details> <summary> 6. Az 1/x oszlopnál ügyelj a 0-val végzett osztásra!
  </summary>
 Ami eddig a for-ban volt, most if-be is kerül, és szétágazunk: if-else. Az else ágban van az új rész.
 
@@ -637,7 +637,7 @@ cout << endl;
 
 </details>
 
-<details> <summary> 6. Cseréld fel a tömb `0`-ás és `10`-es indexű elemét!
+<details> <summary> 6. Cseréld fel a tömb 0-ás és 10-es indexű elemét!
  </summary>
 
 ```c++
@@ -696,7 +696,7 @@ cout << endl;
 
 </details>
 
-<details> <summary> 10. A páratlan indexű elemekhez adj `10`-et!
+<details> <summary> 10. A páratlan indexű elemekhez adj 10-et!
  </summary>
 
 ```c++
@@ -725,7 +725,7 @@ cout << endl;
 
 </details>
 
-<details> <summary> 12. A `0`-ra végződő számokból vonj ki `7`-et!
+<details> <summary> 12. A 0-ra végződő számokból vonj ki 7-et!
  </summary>
 
 ```c++

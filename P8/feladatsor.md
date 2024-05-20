@@ -255,14 +255,14 @@ int main() {
 5. Írasd ki a tömb elemeit külön sorokba úgy, hogy minden elem mellé kerüljön oda a kisbetűs párja.
 6. Írasd ki a tömb elemeit úgy, hogy minden betű mellé kerüljön az angol ábécében őt megelőző, majd az őt követő karakter!
 
->Minta 5.-re:
->A a
->X x
->S s
->Minta 6.-ra:
->D C E
->B A C
->Q P R
+>Minta 5.-re: &br
+>A a &br;
+>X x &br;
+>S s &br;
+>Minta 6.-ra: &br;
+>D C E &br;
+>B A C &br;
+>Q P R &br;
 
 <details> <summary> Teljes megoldás: </summary>
 

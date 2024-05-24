@@ -58,20 +58,29 @@ Ezen kívül hozz létre egész szám tárolására `x1`, `y1` és `z1` változ�
     <details> <summary> A függvény fejléce </summary> 
 
     `string osszefuz(string kezd, int szam, string veg)`
-7. Készíts függvényt, ami kap 3 egész számot, és kiszámolja az átlagukat.
+
+   </details>
+
+7. Készíts függvényt, ami kap 3 egész számot, és kiszámolja az összegüket.
+    <details> <summary> A függvény fejléce </summary> 
+
+   `int szamOsszeg(int a, int b, int c)`
+
+   </details>
+8. Készíts függvényt, ami kap 3 egész számot, és kiszámolja az átlagukat.
     <details> <summary> A függvény fejléce </summary> 
 
     `double szamAtlag(int a, int b, int c)`
 
     </details>
-8. Készíts függvényt, ami megkapja a háromszög két befogóját, és kiszámolja az átfogót.
+9. Készíts függvényt, ami megkapja a háromszög két befogóját, és kiszámolja az átfogót.
     <details> <summary> A függvény fejléce </summary> 
 
     `double atfogo(int a, int b)`
 
     </details>
 
-9. Készíts függvényt, ami visszaad egy ehez hasonló, igaz mondatot:
+10. Készíts függvényt, ami visszaad egy ehez hasonló, igaz mondatot:
     > A tömb átlagoni aluli elemeiből 10 darab van, ezek: 3,1,6,2,5,4,1,0,6,-1
 
     <details> <summary> A függvény fejléce </summary> 
@@ -80,7 +89,7 @@ Ezen kívül hozz létre egész szám tárolására `x1`, `y1` és `z1` változ�
 
     </details>
 
-10. (**NEHÉZ**) Készítsd el a másik két módon is a tömböket. Írj függvényt, ami megkapja mindhárom tömböt, és visszaad egy negyediket, amiben minden elem az eredeti háromból az elemek összege. A főprogramban állapítsd meg, hogy mekkora az "értékes" része a tömbnek.
+11. (**NEHÉZ**) Készítsd el a másik két módon is a tömböket. Írj függvényt, ami megkapja mindhárom tömböt, és visszaad egy negyediket, amiben minden elem az eredeti háromból az elemek összege. A főprogramban állapítsd meg, hogy mekkora az "értékes" része a tömbnek.
     > Pl.  
     eredmeny[0] = a[0] + b[0] + c[0]  
     eredmeny[1] = a[1] + b[1] + c[1]  

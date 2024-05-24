@@ -99,6 +99,7 @@ int main() {
         }
     }
     double paratlanAtlag = paratlanOsszeg * 1.00 / paratlanDB;
+    cout << "A paratlan szamok osszege: " << paratlanOsszeg << endl;
     cout << "A paratlan szamok atlaga: " << paratlanAtlag << endl;
 
     int legkisebb = a[0];

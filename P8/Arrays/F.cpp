@@ -24,7 +24,6 @@ int main() {
     }
     cout << "-----------------------------" << endl;
     
-    // Minden oszlop alatt jelenjen meg a benne lévő számok összege, az alatta lévő sorban pedig az átlaguk!
     double osszeg = 0;
     double plusz3Osszeg = 0;
     double per4Osszeg = 0;
@@ -39,13 +38,13 @@ int main() {
             egyPerDB++;
         }
     }
+    cout << osszeg << "\t" << plusz3Osszeg << "\t" << per4Osszeg << "\t" << egyPerOsszeg << endl;
 
     double atlag = osszeg / 8;
     double plusz3Atlag = plusz3Osszeg / 8;
     double per4Atlag = per4Osszeg / 8;
     double egyPerAtlag = egyPerOsszeg / egyPerDB;
 
-    cout << osszeg << "\t" << plusz3Osszeg << "\t" << per4Osszeg << "\t" << egyPerOsszeg << endl;
     cout << atlag << "\t" << plusz3Atlag << "\t" << per4Atlag << "\t" << egyPerAtlag << endl;
 
 

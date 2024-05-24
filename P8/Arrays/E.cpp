@@ -49,7 +49,6 @@ int main() {
         // tehat a kisbetu es nagybetu kozott 32 a kulonbseg
         cout << (char)(a[i] + 32) << endl;
     }
-
     cout << endl;
 
     for(int i = 0; i < 15; i++) {

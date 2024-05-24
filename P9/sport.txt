@@ -1,0 +1,6 @@
+Seta 34 60
+Futas 6 20
+Uszas 21 30
+Testepites 14 90
+Biciklizes 11 40
+Alvas 90 40

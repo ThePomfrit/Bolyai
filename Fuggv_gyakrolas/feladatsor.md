@@ -58,10 +58,10 @@ Ezen kívül hozz létre egész szám tárolására `a`, `b` és `c` változóka
     <details> <summary> A függvény fejléce </summary> 
 
     `string osszefuz(string kezd, int szam, string veg)`
-7. Készíts függvényt, ami kap 3 (nem egész) számot, és kiszámolja az átlagukat.
+7. Készíts függvényt, ami kap 3 egész számot, és kiszámolja az átlagukat.
     <details> <summary> A függvény fejléce </summary> 
 
-    `double szamAtlag(double a, double b, double c)`
+    `double szamAtlag(int a, int b, int c)`
 
     </details>
 8. Készíts függvényt, ami megkapja a háromszög két befogóját, és kiszámolja az átfogót.

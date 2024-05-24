@@ -82,9 +82,14 @@ Ezen kívül hozz létre egész szám tárolására `a`, `b` és `c` változóka
 
 10. (**NEHÉZ**) Készítsd el a másik két módon is a tömböket. Írj függvényt, ami megkapja mindhárom tömböt, és visszaad egy negyediket, amiben minden elem az eredeti háromból az elemek összege. A főprogramban állapítsd meg, hogy mekkora az "értékes" része a tömbnek.
     > Pl.  
-    eredmeny[0] = a1[0] + a2[0] + a3[0]  
-    eredmeny[1] = a1[1] + a2[1] + a3[1]  
+    eredmeny[0] = a[0] + b[0] + c[0]  
+    eredmeny[1] = a[1] + b[1] + c[1]  
     ...  
     Ha elfogy valamelyik tömb (végjelbe ütközik), akkor abból tovább ne vegye az elemeket  
     *tipp: Ha még feltöltés előtt lenullázod a tömböket, akkor itt hiába fogynak el az elemek, mivel 0-kat bármikor hozzáadhatunk a még elemeket tartalmazó tömbökhöz.*
+    <details> <summary> A függvény fejléce </summary> 
+
+    `int* tombokOsszege(int* a, int n, int* b, int m, int* c, int k)`
+
+    </details>
 

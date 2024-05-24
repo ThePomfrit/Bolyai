@@ -14,7 +14,7 @@ kiirni = kiirni + szamSzoveg
 ```
 Kicsit komplikált a feladatsor, ha ezeket meg tudod csinálni, akkor biztos nem lesz gond a javítón.
 
-1. Készíts egy tömböt `20` egész számok tárolására. Úgy töltsd fel, ahogy szeretnéd, (cin, file, random), habár én fileból olvasást ajánlom (Így nem kell minden alkalommal begépelni a számokat, sem újraszámolni az átlagot és hasonlókat minden futásnál). Mindenképp `0` végjelig olvass (vagy ameddig tele nem lesz a tömb).
+1. Készíts egy tömböt `20` egész szám tárolására. Úgy töltsd fel, ahogy szeretnéd, (cin, file, random), habár én fileból olvasást ajánlom (Így nem kell minden alkalommal begépelni a számokat, sem újraszámolni az átlagot és hasonlókat minden futásnál). Mindenképp `0` végjelig olvass (vagy ameddig tele nem lesz a tömb).
 Ezen kívül hozz létre egész szám tárolására `a`, `b` és `c` változókat, és tizedes szám tárolására `x`, `y` és `z` változókat. Mindnek adj változatos kezdőértékeket.
 
     **a.** Ha cin-t választod, akkor próbáld ki, hogy mi történik, ha a 0-t adsz neki (tényleg leáll-e), ha pedig beírod mind a 20 számot, akkor ezután leáll-e. Így tudod ellenőrizni, hogy jól működik az adatbeviteled. Ne felejts el negatív számokat is adni!

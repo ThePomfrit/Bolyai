@@ -2,7 +2,7 @@
 
 Minden feladatnál próbáld meg először te kitalálni, hogy hogy kellene kinéznie a fejlécnek. Ezt írd is le a programban, majd kommenteld ki (`//` teszel a sor elejére), és csak ez után nézd meg, hogy mi a fejléc.
 Minden függvényt hívj meg és írass ki **üzenettel együtt** a főprogramban.
-**FONTOS:** A string-es feladatoknál szükséged lesz arra, hogy int szöveggé alakuljon. Ennek az ellentétjét (szöveg -> szám) már meg tudjuk csinálni a `stoi(szam)` függvény segítségével. Ahhoz, hogy számból alakítsunk szöveggé, a `to_string(szam)` függvény fog kelleni.
+**FONTOS:** A string-es feladatoknál szükséged lesz arra, hogy int szöveggé alakuljon. Ennek az ellentétjét (szöveg -> szám) már meg tudjuk csinálni a `stoi(szam)` függvény segítségével. Ahhoz, hogy számból alakítsunk szöveggé, a `to_string(szam)` függvény fog kelleni. Ehhez fent oda kell írni, hogy `#include <string>`.
 
 ``` cpp
 int a = 10;

@@ -15,7 +15,7 @@ kiirni = kiirni + szamSzoveg
 Kicsit komplikált a feladatsor, ha ezeket meg tudod csinálni, akkor biztos nem lesz gond a javítón.
 
 1. Készíts egy tömböt `20` egész szám tárolására. Úgy töltsd fel, ahogy szeretnéd, (cin, file, random), habár én fileból olvasást ajánlom (Így nem kell minden alkalommal begépelni a számokat, sem újraszámolni az átlagot és hasonlókat minden futásnál). Mindenképp `0` végjelig olvass (vagy ameddig tele nem lesz a tömb).
-Ezen kívül hozz létre egész szám tárolására `a`, `b` és `c` változókat, és tizedes szám tárolására `x`, `y` és `z` változókat. Mindnek adj változatos kezdőértékeket.
+Ezen kívül hozz létre egész szám tárolására `x1`, `y1` és `z1` változókat, és tizedes szám tárolására `x2`, `y2` és `z2` változókat. Mindnek adj változatos kezdőértékeket.
 
     **a.** Ha cin-t választod, akkor próbáld ki, hogy mi történik, ha a 0-t adsz neki (tényleg leáll-e), ha pedig beírod mind a 20 számot, akkor ezután leáll-e. Így tudod ellenőrizni, hogy jól működik az adatbeviteled. Ne felejts el negatív számokat is adni!
 
@@ -89,7 +89,7 @@ Ezen kívül hozz létre egész szám tárolására `a`, `b` és `c` változóka
     *tipp: Ha még feltöltés előtt lenullázod a tömböket, akkor itt hiába fogynak el az elemek, mivel 0-kat bármikor hozzáadhatunk a még elemeket tartalmazó tömbökhöz.*
     <details> <summary> A függvény fejléce </summary> 
 
-    `int* tombokOsszege(int* a, int n, int* b, int m, int* c, int k)`
+    `int* tombokOsszege(int* a, int indA, int* b, int indB, int* c, int indC)`
 
     </details>
 

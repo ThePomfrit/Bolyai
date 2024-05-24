@@ -6,7 +6,9 @@
 4. Készíts egy másolatot a tömbről!
 5. Rendezd az eredeti tömböt növekvő sorrendben, majd írasd ki.
 6. Rendezd a másolt tömböt csökkenő sorrendben, majd írasd ki.
+
 ## Struktúra rendezése
+
 1. Hozz létre egy "Személy" struktúrát, amely eltárolja egy személy adatait:
 a. Vezetéknév
 b. Utónév

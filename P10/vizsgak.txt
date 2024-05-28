@@ -1,0 +1,12 @@
+Manci 120 111
+Nandi 100 120
+Viola 205 200
+Jani 23 70
+Manci 110 180
+Rezso 200 100
+Nandi 100 45
+Nandi 300 100 
+Viola 210 120
+Rezso 110 140
+Manci 120 90
+Jani 110 157

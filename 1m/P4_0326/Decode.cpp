@@ -58,5 +58,6 @@ int main() {
     return 0; 
 }
 
-
+/*
 F4215 a kodja annak a....
+*/

@@ -26,6 +26,23 @@ Minden tanuló több tesztpárt is kitölthetett.
 21. ** Akinek az össz pontszáma kevesebb mint 200, azok nem tették le a vizsgát. hányan vannak? 
 22. ** Hozz létre egy új tömböt! Ide írd át mindegyik személyt a legjobb osszpontszámú teszt eredményeivel együtt! Írasd ki az új tömb elemeit!  
 
+```txt
+# Vizsgak.txt
+
+Manci 120 111
+Nandi 100 120
+Viola 205 200
+Jancsi 23 70
+Manci 110 180
+Rezso 200 100
+Nandi 100 45
+Nandi 300 100 
+Viola 210 120
+Rezso 110 140
+Manci 120 90
+Jancsi 110 157
+```
+
 <details> <summary> Megoldás </summary> 
 
 ```cpp

@@ -753,7 +753,7 @@ A főprogramból hívd meg a függvényt, írasd ki a kétjegyűek számát!
 
 </details>
 
-## Z csoport
+### Z csoport
 
 Írj programot:
 
@@ -869,3 +869,445 @@ A főprogramból hívd meg a függvényt, írasd ki a kétjegyűek számát!
     ```
 
 </details>
+
+## 4. pótóra (2024. Március 26.)
+
+### A feladat
+
+>A személyi számunkról (JMBG)  
+Tudjuk, hogy a JMBG 13 jegyű, és kódként használatos. A következő elemekből épül fel:  
+    • 1-2 számjegy a születés napja (hányadika);  
+    • 3-4 a születés hónapja (hanyadik);  
+    • 5-6-7 a születési évszám utolsó 3 számjegye;  
+    • 10. számjegy – ha 0, akkor a személy neme férfi, ha 5, akkor a személy neme nő;  
+    *példa: 1302989825066 ez a személy 1989.02.13-án született, nő*
+1. Egy szöveges fileba írjuk be 3 személy JMBG-jét!
+2. Olvassuk be sztringbe egy személy személyi számát (JMBG)! (például `1202928820042`).
+3. Válaszd ki külön változóba a születési évet;
+4. Alkosd meg belőle a teljes születési évet leíró karaktereket (4 jegyű legyen)!
+5. Válaszd ki külön változóba a születés hónapját!
+6. Válaszd ki külön változóba a születés napját!
+7. A nemre vonatkozó karaktertől és a születési évtől függően egy változó értéke legyen fiú/lány vagy férfi/nő *(akik 2000-ben, vagy azóta születtek, azok esetén a fiú/lány, a többiekre a férfi/nő)* kerüljön a változóba!
+8. Hozz létre egy üzenetet a következő formában: 
+    >Ez a fiú/lány/férfi/nő eeee.hh.nn –án született.”
+
+### B feladat
+1. Két sztring típusú változóba adjunk meg kezdőértékként (a tesztelés könnyítése miatt) be két személyi számot! (pl `1112978820077` és `0102003825011`).
+`string attila=”1112978820077”, anna=”0102003825011”;`
+2. Határozzuk meg a születés hónapját és napját! 
+3. Ezekből az adatokból döntsd el, hogy az év folyamán kinek van/volt/lesz előbb a születésnapja!
+4. Írj erről üzenetet!
+5. Hány nappal lesz korábban a születésnap? (vedd figyelembe a hónapok valós hosszát és azt is, hogy a mostani évszázadokban minden néggyel osztható évszám szökőév).
+Ehhez a feladathoz érdemes létrehozni egy tömböt a hónapok hosszával: 
+`int ho[12]={31,28,31,30,31,30,31,31,30,31,30,31}`
+vagy, lehet, hogy praktikusabb:
+`int hojobb[13]={0,31,28,31,30,31,30,31,31,30,31,30,31}`
+
+6. A felhasználótól kérj be egy dátumot! (`hh nn`)
+7. Döntsd el, hogy az adott dátumtól számítva melyik személy fog előbb születésnapot ünnepelni!
+
+### C feladat
+A projektumod mappájába másold be a szemszam.txt szöveges dokumentumot, aminek a tartalma: 
+
+```txt
+Attila 1112978820077 Emese 0102003825011
+Pityu 1311985720018 Lenke 0102005825014
+Monika 1202014615045 Kitti 1102003825004
+```
+
+1. Nyisd meg a filet-olvasásra!
+2. Deklarálj egy sztringet, amibe a el tudod helyezni a fileból beolvasott egy-egy sort!
+3. `getline`-nal olvasd be a file első sorában lévő adatokat!
+4. A kapott sztringben keresd meg az első szóköz helyét! Az eredményt tárold!
+5. Válaszd ki külön sztringbe a személy nevét! 
+`string nev (string sor)`
+6. Válaszd ki külön sztringbe a személyi számot!
+7. Válaszd ki külön sztringbe az JMBG-ből a napra vonatkozó részt! Erre kell egy változó!
+8. Alakítsd ezt egész számmá! Erre is kell egy vátozó!
+9. Válaszd ki sztringbe a hónapra vonatkozó részt is! Erre is kell változó! 
+10. Alakítsd egész számmá! Tárold!
+11. Töröld a bejövő sztringből az első nevet és a az első személyi számot is! Írasd ki a maradékot, hogy lásd, jól töröltél-e? 
+12. Ebben a sztringben keresd meg az első szóköz helyét! Az eredményt tárold!
+13. Válaszd ki külön sztringbe a személy nevét! (használd a kész függvényt!)
+14. Válaszd ki külön sztringbe a személyi számot!  
+15. Válaszd ki külön sztringbe az JMBG-ből a  napra vonatkozó részt! 
+16. Alakítsd ezt egész számmá! 
+17. Válaszd ki sztringbe a hónapra vonatkozó részt is!  
+18. Alakítsd egész számmá! 
+Így az egy sorban lévő két személyről ki tudod íratni a következő mondatot:
+    >Attila 12.11-én, Emese pedig 2.1-én ünnepli a  születésnapját.
+    
+    A hónap kiírására használhatod a következő tömböt is: 
+    `string ho[13]={“”, “januar”, ..., “december”};`
+    Ebben az esetben a mondat barátságosabb lesz: 
+    >Attila december 11-én, Emese pedig február 1-én ünnepli a  születésnapját.
+
+19. Állapítsd meg, hogy kinek van korábban a születésnapja, és írj róla üzenetet:
+    > pl. Emese ünnepel korábban. 
+20. A fileban lévő összes sort dolgozd fel ugyanígy.
+21. Zárd be a filet! 
+ 
+### D feladat
+1. Másold a projektumod mappájába a datumok.txt filet, aminek tartalma: 
+    ```txt
+    12/1/21
+    21/11/93
+    1/1/89
+    23/5/02
+    17/9/17
+    15/12/10
+    ```
+    Minden sorban 1-1 születési dátum található, nap/hó/év formátumban. 
+2. Nyisd meg a filet olvasásra! Ellenőrizd, hpgy megnyílt-e helyesen a file! Ha nem, adj üzenetet!
+3. Soronként (`getline`) olvasd be az adatokat. 
+4. Minden sort bonts szét részekre: napra, hónapra, évre. 
+5. Határozd meg a teljes évszámot: ha az évszám első számjegye kevesebb mint 3, akkor a dátumot a kétzeres évekből valónak tekintjük. A többi évszám az 1900-as ávekből való legyen! 
+6. Számítsd ki hogy az idén hány éves az a személy, akinek ez az születési dátuma!
+7. Nyiss egy új fájlt írásra, a neve legyen `datmagyar.txt`. 
+8. Írd ki a képernyőre következő mondatokat: nn. szuletesnap: 2024. hhh dd. 
+pl az első sor alapján: 3. születésnap: 2024. jan 12.
+9. Írd ki a fájlba is a mondatokat, külön sorokba!
+
+### E feladat
+
+1. Másold a projektumod mappájába a furcsak.txt file, aminek a tartalma: 
+
+    ```txt
+    Kalocsai Anna+Piroska 1956.1.11. beszerzo
+    Nagy+Nemedi Kelemen 2001.12.3. kereskedo
+    Szemeredi Ivan 2008.3.10 vizvezetekszerelo
+    Kispal Peter+Zalan 1994.10.4. szakacs
+    Toth+Ugyonka Kitti+Anita 2000.4.6. cukrasz
+    ```
+
+    A file minden sorában egy személy teljes neve, születési dátuma és foglalkozása található.
+    A teljes név vezetéknév keresztnév sorrendben van a fájlban. 
+    Bizonyos személyek vezetékneve 2 részből áll. Ilyenkor a két rész között + jel jelzi a határt. 
+    Más személyeknek két keresztnevük is van. Ilyenkor a két keresztnév között + jel jelzi a határt. 
+    A vezetéknév és a keresztnév között mindenképpen szóköz van. 
+    Egy szóköz választja el egymástól a születési dátumot és foglalkozást.
+
+2. Nyisd meg a filet olvasásra! Ellenőrizd, hpgy megnyílt-e helyesen a file! Ha nem, adj üzenetet!
+3. Soronként (`getline`) olvasd be az adatokat. 
+4. Egy sort bonts szét több adatra: `vezeteknev`, `keresztnev`, `szul_ev`, `szul_ho`, `szul_nap`, `foglalkozas`. 
+5. Minden személyről a következő formában írd ki az adatait:
+    >Vezetéknev: Toth Ugyonka  
+    Keresztnev: Kitti Anita  
+    Szuletett: 2000 aprilis 6.  
+    Foglalkozasa: cukrasz
+6. Akik a kétezres években születtek, azoknak a keresztnevét és a foglalkozását írd ki a `fiatalok.txt` fileba, soronként: 
+    ```txt
+    Kelemen kereskedo
+    Ivan vizvezetekszerelo
+    ...
+    ```
+
+
+### F feladat
+1. Másold a projektumod mappájába a varosok.txt filet, aminek tartalma: 
+    ```txt
+    Zenta Szerbia Europa 18704 293
+    Magyarkanizsa Szerbia Europa 9871 400
+    Los Angeles USA Amerika 3967000 1302
+    Budapest Magyarorszag Europa 1756000 525
+    Moszkva Oroszorszag ? 11920000 2511
+    ```
+    Minden sorban 1-1 városról megtaláljuk, a következő adatokat: elnevezés, ország, kontinens, lakosság száma (fő), területe (km2). 
+2. Nyisd meg a filet olvasásra! Ellenőrizd, hpgy megnyílt-e helyesen a file! Ha nem, adj üzenetet!
+3. Soronként (`getline`) olvasd be az adatokat. 
+4. Minden sort bonts szét részekre, és tárold a megfelelő típusú változókban: `elnevezes`, `orszag`, `foldresz`, `lakossag`, `terulet`. 
+5. A képernyőre írj ki ilyen szerkezetű mondatokat: 
+    >Zenta egy varos Szerbia-ban, 18704 lakosa van!
+6. Minden városnak számítsd ki a népsűrűségét! A mértékegység legyen `fő/km2`. 
+7. Számítsd ki, hogy a megnevezett városok lakossága hányszoros Zenta lakosságához képest! 
+8. Nyiss egy új fájlt írásra, a neve legyen `v.txt`. 
+9. A fileba írd ki az európai városokat és a népsűrűségüket és azt hogy hányszor van több lakosuk mint Zentának. Az információkat foglald mondatba! Ha egy város kisebb Zentánál, ott ne szerepeljen ez a szám. Pl:
+    >Budapestnek 9,38-szor tobb lakosa van mint Zentanak, a nepsurusege 3344 fo/km2.
+    
+    vagy:
+    >Magyarkanizsa nepsurusege 24,68 fo/km2. 
+    
+    Minden város mondata kerüljön külön sorba!
+
+### G feladat
+
+A `gyakorlat.txt` fileba másold át a következő kódokat: 
+
+    F4215
+    F2319
+    L1321
+    L2222
+    L1303
+    F2110
+A első karkater azt jelöli, hogy fiú vagy lány a szeméy akinek a kódot adták, 
+A második karakter, hogy hanyadik osztályos
+A harmadik karakter: 1-matekos 2-képzős 3-infós
+A 4-5. karakter: az évszám, amikor a kódot kapta
+Pl az első kódból ez a mondat állítható össze: 
+>F4215  a kódja annak, a fiúnak, aki 2015-ben negyedikes volt a képzős szakon. 
+
+**FELADAT:** Mindegyik kódhoz írasd ki a megfelelő mondatot. 
+
+### H feladat
+A `mindenfele.txt` fileba másold át a következő időpontokat: 
+```
+1992.8.11. 20:53:23
+2023.11.12. 15:42:11
+2011.3.11. 11:7:10
+2013.1.1. 1:2:3
+```
+Írass ki minden sor alapján egy ehhez hasonló mondatot: 
+>1992-ben, augusztus 11-én délután 8:53-kor történt valami. 
+
+## 5. Pótóra (2024. Április 16.)
+
+### A feladat
+
+Hozz létre egy struktúra –típust:
+
+```cpp
+typedef struct {
+    int ora;
+    int perc;
+} Idopont;
+```
+
+1. Deklarálj két Idopont típusú változót.
+2. Az egyikbe egy véletlen időpont kerüljön 8:00 és 9:59 között!
+3. A másikba a felhasználótól kérj egy időpontot!
+4. Írasd ki mindkét időpontot oo:pp formátumban! Írhatsz erre függvényt is!
+5. Állapítsd meg, hogy a véletlen időpont korábbi, későbbi, vagy egybeesik a felhasználó által bevitt időponttal! Számítsd ki az eltérést is, és írd ki üzenet formájában: “A felhasználó időpontja hh óra pp perccel korábbi/későbbi mint a véletlen időpont ”, vagy “A két időpont egybeesik”. 
+6. Hozz létre egy `20` elemű `Idopont` típusú tömböt és töltsd fel 8:00 és 14:59 közötti időpontokkal.
+7. Írasd ki a tömb elemeit egymás alá oo:pp formátumban
+8. Válaszd ki a legkorábbi és a  legkésőbbi időpontot, és számítsd ki, hogy hány perc az eltérés közözttük, majd írd ki az eltérést oo:pp formátumban is.
+
+### B feladat
+
+Írj programot, ami síkbeli pontok tárolására létrehoz egy típust (struktúrát) és tartalmazza a következő függvényeket:
+1. Pont beírása *(függvény bemenő paraméter nélkül, kijön belőle egy pont)*
+2. Pont kiírása *(függvény-void)*
+3. Megállapítani, hogy két pont vízszintes szakaszt alkot-e? A függvény kimenete legyen 1 ha vízszintes, és 0 ha nem. *(függvény)*
+4. Kiszámítani a szakasz hosszát (ehhez is két pont kell) *(függvény)*
+ha `A(x1,y1)` és `B(x2,y2)`, akkor $ |AB|=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2} $
+5. Megállapítani, hogy a pont melyik negyedhez tartozik *(függvény, 1, 2, 3 vagy 4 értéket adjon vissza)*
+	**FŐPROGRAM**
+6. A főprogramban kérj be `3` pontot (`m`, `n`, `p`) a felhasználótól amik egy háromszög csúcsai! *(ciklus, függvényhívás)*
+7. Számítsd ki az oldalak hosszát (mn, np, mp)! *(ciklus, függvényhívás)*
+8. Számítsd ki a háromszög kerületét, írd ki! 
+9. Számítsd ki a területét is *(Heron képlettel)*
+$ Ha a háromszög oldalainak hossza a, b és c-vel van jelölve, akkor
+ T=\sqrt{s*(s-a)*(s-b)*(s-c)} , ahol s=\frac{a+b+c}{2} $
+10. Állapítsd meg, hogy van-e a háromszögnek vízszintes oldala, és írj róla üzenetet! Használd a megírt függvényt!
+11. Metszi-e a háromszöget az y tengely? Állapítsd meg, és írd ki a választ!
+12.	És az x tengely? Állapítsd meg, és írd ki a választ!
+
+
+### C feladat
+Misi kedvenc „étele” a madártej. Kell hozzá 
+* 0,8 liter tej
+* 5 tojás
+* 0,3 kg cukor 
+* 2 csomag vaníliás puding
+
+Ebből 2 adag lesz. 
+A hozzávalók boltonként más-más áron kerülnek a polcra, ezért írjunk programot arra, hogy kiszámítsuk egy adag árát.
+
+1. Hozz létre struktúrát:
+    * bolt neve
+    * tej ára (din/liter)
+    * tojás ára (din/db)
+    * cukor ára (din/kg)
+    * vaníliás puding  (din/csomag)
+
+    ```c++
+    typedef struct {
+        string nev;
+        int tejAr;
+        int tojasAr;
+        int cukorAr;
+        int pudingAr;
+    }
+    ```
+    Az árak egész számok.
+
+**2. Vigyük be** 3 boltból a termékek árait, tároljuk őket fileban!
+pl. 
+
+    ```txt
+    bolt1 100 20 70	30
+    bolt2 125 22 65 40
+    bolt3 140 20 58 30
+    bolt4 135 19 88 42
+    ```
+
+**3. Olvassuk vissza** a fileból az adatokat, listázzuk ki a képernyőre táblázatos formában. 
+```c++
+    while (!fI.eof()) {
+        string line;
+        getline(fI, line);
+        bolt.nev = line.substr(0, line.find(" "));
+        line = line.substr(line.find(" ") + 1);
+        bolt.tejAr = stoi(line.substr(0, line.find(" ")));
+        line = line.substr(line.find(" ") + 1);
+        bolt.tojasAr = stoi(line.substr(0, line.find(" ")));
+        line = line.substr(line.find(" ") + 1);
+        bolt.cukorAr = stoi(line.substr(0, line.find(" ")));
+        line = line.substr(line.find(" ") + 1);
+        bolt.pudingAr = stoi(line.substr(0, line.find(" ")));
+    }  
+//Modositani arra, hogy ne csak egy boltot taroljunk, hanem egy tombben legyenek
+//Max 3 bolt adatait olvassuk be
+//Mindenhol boltok -> boltok[i]
+//a vegere egy i++;
+//elotte ne felejtsuk el letrehozni i-t es a tombot
+
+    cout << "Nev\tTej\tTojas\tCukor\tPuding" << endl;
+    cout << "----------------------------------------" << endl;
+    for(int j = 0 ; j < i; j++) {
+        cout << bolt[j].nev << "\t";
+        cout << bolt[j].tejAr << "\t";
+        cout << bolt[j].cukorAr << "\t";
+        cout << bolt[j].pudingAr << "\n";
+    }
+```
+**4. Számítsuk ki** mindegyik esetben, hogy mennyibe kerül egy adag madártej alapanyaga. 
+```c++
+int ar = 0;
+for(int i = 0; i < 3; i++) {
+    ar += bolt[i].tejAr * 0.8;
+    ar += bolt[i].tojasAr * 5;
+    ar += bolt[i].cukorAr * 0.3;
+    ar += bolt[i].pudingAr * 2;
+}
+```
+
+**5. A munkadíj** és egyéb költségek címén az eddig kiszámított összeg 70%-át számoljuk még el. 
+Egy másik fileba írjuk ki: a bolt nevét és egy adag költségét anyagi és tobábbi költségekre bontva.
+Pl. `bolt1	261 + 182.7 = 443.7`
+
+```c++
+    ofstream fO;
+    fO.open("out.txt");
+    
+    for(int i = 0; i < 3; i++) {
+        fO << bolt[i].nev << "\t" << ar[i] << " + " << ar[i] * 0.7 << " = " << ar[i] * 1.7 << endl;
+    }
+```
+
+---
+`in.txt:`
+```txt
+bolt1 100 20 70 30
+bolt2 125 22 65 40
+bolt3 140 20 58 30
+bolt4 135 19 88 42
+```
+---
+`out.txt:`
+```txt
+bolt1	261 + 182.7 = 443.7
+bolt2	309 + 216.3 = 525.3
+bolt3	289 + 202.3 = 491.3
+```
+---
+`console:`
+```txt
+Nev     Tej     Tojas   Cukor   Puding
+----------------------------------------
+bolt1   100     20      70      30
+bolt2   125     22      65      40
+bolt3   140     20      58      30
+```
+
+## 6. Pótóra (2024. Április 16.)
+
+A vasarlok.txt adatit olvasd be soronként:
+* neve
+* mennyit koltott
+* melyik evben szuletett
+
+Hozz létre struktúrát az adatoknak!
+```
+typedef struct {
+    string nev;
+    int penz;
+    int szulev;
+} Vasarlo;
+```
+Hozz létre tömböt, ami struktúrát tartalmaz (max 20 elem számára)
+```c++
+Vasarlo vasarlok[20];
+```
+Olvasd be a file sorait getline-nal
+```
+while(!f.eof()) {
+    string line;
+    getline(f, line);
+}
+```
+Bontsd fel részeire a sort és tárold egy struktúrában
+```
+int vege = line.find(" ");
+int ejele = vege + 1;
+uj.nev = line.substr()
+```
+Az adatokat írd be a tömbbe
+
+Számítsd ki minden vasárlóról, hogy hány éves az idén.
+
+Keresd ki hogy ki a legfiatalab, írasd ki a nevét.
+
+Kik azok, akik 2000-nél többet költöttek?
+
+Mennyi az átlag vásárlási költség?
+
+Kik költöttek kevesebbet az átlagnál? 
+
+fi = 0;
+fiatal = a[0].hev
+for(int i = 0; i < n; i++){
+    if(fiatal < a[i].hev) {
+        fiatal = a[i].hev;
+        fi=i
+    }
+}
+
+a[fi].nev
+
+## 7. Pótóra (2024. Május 07.)
+
+### Tömb rendezése
+
+1. Készíts egy 10 elemű tömböt. 
+2. Töltsd fel véletlen számokkal 5-100 közt.
+3. Írd ki az elemeit a képernyőre, üreshelyekkel elválasztva!
+4. Készíts egy másolatot a tömbről!
+5. Rendezd az eredeti tömböt növekvő sorrendben, majd írasd ki.
+6. Rendezd a másolt tömböt csökkenő sorrendben, majd írasd ki.
+
+### Struktúra rendezése
+
+1. Hozz létre egy "Személy" struktúrát, amely eltárolja egy személy adatait:
+a. Vezetéknév
+b. Utónév
+c. JMBG
+d. Magasság
+2. Olvasd be fileból 10 személy adatait:
+```
+Kovács János 1506990710011 175
+Nagy Eszter 2008984405017 163
+Tóth Péter 0603005610026 178
+Szabó Anna 3011999925021 170
+Horváth Gábor 2507950620135 185
+Kovács Kinga 1404993105004 168
+Molnár Balázs 1806997800012 180
+Varga Zsuzsanna 1001008915010 165
+Farkas Ádám 0303978900023 177
+Papp Katalin 2205995305005 172
+```
+3. Tárold el az adatokat egy Személyekből álló tömbbe.
+4. Másold le a tömböt, és az új tömböt rendezd magasság szerint.
+5. Másold le a tömböt, és az út tömböt rendezd születési dátum szerint.
+5. Másold le a tömböt, és az új tömböt rendezd név szerint.
+6. Írd ki az eredeti tömböt, majd minden tömből a neveket és a rendezett adatot.
+

@@ -50,7 +50,7 @@ int main() {
     while (ind < n && a[ind] < torol) {
         ind++;
     }
-    if(ind == n) {
+    if(a[ind] != torol) {
         cout << "Nincs ilyen szam a tombben!" << endl;
     } else {
         for (int i = ind; i < n - 1; i++) {

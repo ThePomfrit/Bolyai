@@ -37,12 +37,17 @@ string getTown(string JMBG) {
     return JMBG.substr(7, 2);
 }
 
+string doubleToString(double d) {
+    string str = to_string(d);
+    return str.substr(0, str.find(".") + 3);
+}
+
 string formSentence(Student s) {
     string str = s.name;
     str += " " + getBirthday(s.JMBG)  + "-án/én született ";
     str += getGender(s.JMBG) + ". A ";
-    str += getTown(s.JMBG) + "-es kódú városban született, és az átlaga ";
-    str += to_string(averageGrade(s.grades)) + ".";
+    str += getTown(s.JMBG) + "-es kódú körzetben született, és az átlaga ";
+    str += doubleToString(averageGrade(s.grades)) + ".";
 
     return str;
 }
@@ -69,6 +74,7 @@ int main() {
         row = row.substr(row.find(";") + 2);
 
         s.JMBG = row.substr(0, row.find(";"));
+        cout << s.JMBG;
         row = row.substr(row.find(";") + 2);
 
         while(row.find(" ") != string::npos) {

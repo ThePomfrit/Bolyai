@@ -1,4 +1,4 @@
-# 1. óra feladatai
+# Feladatsor
 
 ## A feladat
 
@@ -8,18 +8,26 @@ Olvasd be az `inpA.txt` fileból a számokat egy adattárolóba (vector/tömb). 
     
 ---
 
-`inpA.txt`
+*`inpA.txt`*
 
     1 6 8 4 9 3 5 7 9 5 6 1 8 4
 
----
-
-`outA.txt`
+*`outA.txt`*
 
     4 8 1 6 5 9 7 5 3 9 4 8 6 1
 
 ---
-`console`
+
+*`inpA.txt`*
+
+    1 2 3 4 5 6 7 8 9
+
+*`outA.txt`*
+
+    9 8 7 6 5 4 3 2 1
+
+---
+*`console`*
 ``` txt
     
 ```
@@ -30,20 +38,29 @@ Olvasd be az `inpA.txt` fileból a számokat egy adattárolóba (vector/tömb). 
 
 ## B feladat
 
-Hozz létre struktúrát egy tanuló tárolására (név, JMBG, osztályzatok). Az adatokat olvasd be az `inpB.txt` fileból. Írj függvényt, amely kiszámolja, hogy a tanulónak mi az átlaga. Egy másik függvényben alakítsd a JMBG-ben található adatokat, nevet és kiszámolt átlagot egy mondattá.
+Hozz létre struktúrát egy tanuló tárolására (név, JMBG, osztályzatok). Az adatokat olvasd be az `inpB.txt` fileból. Írj függvényt, amely kiszámolja, hogy a tanulónak mi az átlaga. Egy másik függvényben alakítsd a JMBG-ben található adatokat, nevet és kiszámolt átlagot (2 tizedeshellyel) egy mondattá.
 > Kovács János; 1506990710011; 4 4 4 5 2 4  
 Kovács János 1990. 06. 15-én született fiú. A 71-es kódú városban született, és az átlaga 3.83.
+
+JMBG leoszlása  
+1506990710011 -> 15 06 990 71 0 011
+
+|nap|hónap|év|körzet|nem|azonosító|
+|-|-|-|-|-|-|
+|15|06|990|71 (Beograd)|0 (f)|011|
+|06|03|005|80() |0 (f)|026|
+
 <details> <summary>  </summary>
 
 ---
 
-`inpB.txt`
+*`inpB.txt`*
 ```txt
 Kovács János; 1506990710011; 4 4 4 5 2 4
 Nagy Eszter; 2008984405017; 1 1 2 4 2
-Tóth Péter; 0603005610026; 3 5 2 4 5 2
+Tóth Péter; 0603005800026; 3 5 2 4 5 2
 Szabó Anna; 3011999925021; 1 1 1 5 1 2 5 3
-Horváth Gábor; 2507950620135; 4 3 3 2 2 2
+Horváth Gábor; 2507950820135; 4 3 3 2 2 2
 Kovács Kinga; 1404993105004; 1 2 2 4 1 5 4 4
 Molnár Balázs; 1806997800012; 4 5 5 5 4 2
 Varga Zsuzsanna; 1001008915010; 2 5 1 5
@@ -53,12 +70,12 @@ Papp Katalin; 2205995305005; 3 2 2 5 1 5 2 4
 
 ---
 
-`console`
+*`console`*
 
 ```txt
-Kovács János 1990. 06. 15.-án/én született fiú. A 71-es kódú városban született, és az átlaga 3.800000.
-Nagy Eszter 1984. 08. 20.-án/én született lány. A 40-es kódú városban született, és az átlaga 2.000000.
-Tóth Péter 1005. 03. 06.-án/én született fiú. A 61-es kódú városban született, és az átlaga 3.800000.
+Kovács János 1990. 06. 15.-án/én született fiú. A 71-es kódú városban született, és az átlaga 3.800.
+Nagy Eszter 1984. 08. 20.-án/én született lány. A 40-es kódú városban született, és az átlaga 2.000.
+Tóth Péter 1005. 03. 06.-án/én született fiú. A 61-es kódú városban született, és az átlaga 3.800.
 Szabó Anna 1999. 11. 30.-án/én született lány. A 92-es kódú városban született, és az átlaga 2.285714.
 Horváth Gábor 1950. 07. 25.-án/én született fiú. A 62-es kódú városban született, és az átlaga 2.800000.
 Kovács Kinga 1993. 04. 14.-án/én született lány. A 10-es kódú városban született, és az átlaga 2.714286.
@@ -87,7 +104,7 @@ Valamilyen módon töltsd fel a mátrixot (file, random, console), majd írj fü
 
 ---
 
-`console`
+*`console`*
 
 ```txt
 Kérem a mátrix méretét: 3
@@ -106,3 +123,37 @@ A főátló összege: 253
 ---
 
 </details>
+
+## D feladat
+
+Olvasd be az `inpD.txt` fileból a benne levő decimális számot egy int típusú változóba, és számítsd ki annak bináris értékét, majd az eredményt írd bele az `outD.txt` fileba.
+
+<details> <summary> </summary>
+
+---
+
+*`inpD.txt`*
+```txt
+1042
+```
+
+*`outD.txt`*
+```
+10000010010
+```
+---
+
+*`inpD.txt`*
+```txt
+1031
+```
+
+*`outD.txt`*
+```
+10000000111
+```
+---
+*`console`*
+```
+    
+```

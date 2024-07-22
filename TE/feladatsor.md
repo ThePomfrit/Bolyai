@@ -73,16 +73,16 @@ Papp Katalin; 2205995305005; 3 2 2 5 1 5 2 4
 *`console`*
 
 ```txt
-Kovács János 1990. 06. 15.-án/én született fiú. A 71-es kódú városban született, és az átlaga 3.800.
-Nagy Eszter 1984. 08. 20.-án/én született lány. A 40-es kódú városban született, és az átlaga 2.000.
-Tóth Péter 1005. 03. 06.-án/én született fiú. A 61-es kódú városban született, és az átlaga 3.800.
-Szabó Anna 1999. 11. 30.-án/én született lány. A 92-es kódú városban született, és az átlaga 2.285714.
-Horváth Gábor 1950. 07. 25.-án/én született fiú. A 62-es kódú városban született, és az átlaga 2.800000.
-Kovács Kinga 1993. 04. 14.-án/én született lány. A 10-es kódú városban született, és az átlaga 2.714286.
-Molnár Balázs 1997. 06. 18.-án/én született fiú. A 80-es kódú városban született, és az átlaga 4.600000.
-Varga Zsuzsanna 1008. 01. 10.-án/én született lány. A 91-es kódú városban született, és az átlaga 2.666667.
-Farkas Ádám 1978. 03. 03.-án/én született fiú. A 90-es kódú városban született, és az átlaga 3.000000.
-Papp Katalin 1995. 05. 22.-án/én született lány. A 30-es kódú városban született, és az átlaga 2.857143.
+Kovács János 1990. 06. 15.-án/én született fiú. A 71-es kódú városban született, és az átlaga 3.80.
+Nagy Eszter 1984. 08. 20.-án/én született lány. A 40-es kódú városban született, és az átlaga 2.00.
+Tóth Péter 1005. 03. 06.-án/én született fiú. A 61-es kódú városban született, és az átlaga 3.80.
+Szabó Anna 1999. 11. 30.-án/én született lány. A 92-es kódú városban született, és az átlaga 2.28.
+Horváth Gábor 1950. 07. 25.-án/én született fiú. A 62-es kódú városban született, és az átlaga 2.80.
+Kovács Kinga 1993. 04. 14.-án/én született lány. A 10-es kódú városban született, és az átlaga 2.71.
+Molnár Balázs 1997. 06. 18.-án/én született fiú. A 80-es kódú városban született, és az átlaga 4.60.
+Varga Zsuzsanna 1008. 01. 10.-án/én született lány. A 91-es kódú városban született, és az átlaga 2.66.
+Farkas Ádám 1978. 03. 03.-án/én született fiú. A 90-es kódú városban született, és az átlaga 3.00.
+Papp Katalin 1995. 05. 22.-án/én született lány. A 30-es kódú városban született, és az átlaga 2.85.
 ```
 
 ---

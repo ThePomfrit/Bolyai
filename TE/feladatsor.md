@@ -91,14 +91,22 @@ Papp Katalin 1995. 05. 22.-án/én született lány. A 30-es kódú városban sz
 
 ## C feladat
 
-Hozz létre egy mátrixot egész számok tárolására. A mátrix méretét a felhasználó adja meg, viszont négyzetes legyen (3x3, 4x4, de nem lehet 3x4; így csak egy számot kell megadni). Mindig ügyelj arra, hogy a felhasználó által megadott szám megfelelő-e.
+Hozz létre egy 4x4-as (tömb) mátrixot egész számok tárolására. Mindig ügyelj arra, hogy a felhasználó által megadott szám megfelelő-e.
 
-Valamilyen módon töltsd fel a mátrixot (file, random, console), majd írj függvényeket a következő műveletekre:
+Random számokkal töltsd fel a mátrixot, majd írj függvényeket a következő műveletekre:
 
 1. A mátrix kiírása a consolera.
 2. A felhasználó által megadott sorban levő számok összegének kiszámítása.
 3. A főátlón levő számok összege.
-4. A mátrix tükrözése vízszintesen.
+4. A mátrix tükrözése (vízszintesen és függőlegesen).
+
+Mentsd el a munkád, és írd át a programot úgy, hogy vektormátrix-szal dolgozzon, valamint, hogy a mátrix méretét a felhasználó adja meg. Figyeld meg, miket kell változtatni, miket lehet ugyanúgy jelölni de optimálisabb átírni, és mi az ami teljesen ugyanaz maradhat. 
+
+Térj vissza az első verzióhoz (ahol fix volt a méret), és próbáld meg úgy módosítani a programod, hogy a mátrix méretét a felhasználó adja meg, viszont továbbra is négyzetes legyen (3x3, 4x4; de nem lehet 3x4; így csak egy számot kell megadni). 
+Figyeld meg, hogy milyen nehézségek merülnek fel! Figyeld meg, hogy mennyivel könnyebb/nehezebb a vektorokat kezelni, mint a mátrixokat (főleg, ha nem fix a méret, hanem pl. a felhasználó adja meg; legtöbbször ez a helyzet)
+
+
+
 
 <details> <summary>   </summary>
 

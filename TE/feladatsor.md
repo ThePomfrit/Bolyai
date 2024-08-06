@@ -105,9 +105,6 @@ Mentsd el a munkád, és írd át a programot úgy, hogy vektormátrix-szal dolg
 Térj vissza az első verzióhoz (ahol fix volt a méret), és próbáld meg úgy módosítani a programod, hogy a mátrix méretét a felhasználó adja meg, viszont továbbra is négyzetes legyen (3x3, 4x4; de nem lehet 3x4; így csak egy számot kell megadni). 
 Figyeld meg, hogy milyen nehézségek merülnek fel! Figyeld meg, hogy mennyivel könnyebb/nehezebb a vektorokat kezelni, mint a mátrixokat (főleg, ha nem fix a méret, hanem pl. a felhasználó adja meg; legtöbbször ez a helyzet)
 
-
-
-
 <details> <summary>   </summary>
 
 ---
@@ -165,3 +162,230 @@ Olvasd be az `inpD.txt` fileból a benne levő decimális számot egy int típus
 ```
     
 ```
+
+</details>
+
+## E feladat
+
+Az `inp#.txt` file első sora két számot tartalmaz (N,M), a mátrix dimenzióit. A következő N sor M darab számot tartalmaz. Olvasd be a fileból a mátrix elemeit, majd írj függvényt az alábbi műveletekre:
+
+* Egy adott sorban levő legkisebb elem megkeresése
+* Egy adptt oszlopban levő legkisebb elem megkeresése
+* Egy adott sorban levő legnagyobb elem megkeresése
+* Egy adott oszlopban levő legnagyobb elem megkeresése
+* A mátrix legkisebb elemének megkeresése
+* A mátrix legnagyobb elemének megkeresése
+* Ha lehet, a mátrixot forgassa el 90 fokban jobbra
+* Ha lehet, a mátrixot forgassa el 90 fokban balra
+* A mátrix minden páros elemét felezze el, valamint minden páratlan eleméhez adjon hozzá 1-et. Ezt addig ismételje, amíg minden eleme 1 nem lesz.
+
+Minden feladat eredményét mondat formájában írd ki az `out#.txt` fileba.
+
+<details> <summary>  </summary>
+
+`inp1.txt`
+```
+3 4
+12 34 56 78
+23 45 67 89
+34 56 78 90
+```
+
+`inp2.txt`
+```
+2 5
+45 67 89 12 34
+56 78 90 23 45
+```
+
+`inp3.txt`
+```
+4 3
+78 90 12
+89 23 45
+67 89 12
+56 78 90
+```
+
+`inp4.txt`
+```
+4 4
+1 2 3 4
+12 1 2 5
+11 4 3 6
+10 9 8 7
+```
+
+`inp5.txt`
+```
+3 3
+1 2 3 4 5
+16 1 2 3 6
+15 4 5 6 7
+14 7 8 9 8
+13 12 11 10 9
+```
+
+`out1.txt`
+```
+A(z) 1. sor legkisebb eleme: 12
+A(z) 2. sor legkisebb eleme: 23
+A(z) 3. sor legkisebb eleme: 34
+A(z) 1. oszlop legkisebb eleme: 12
+A(z) 2. oszlop legkisebb eleme: 34
+A(z) 3. oszlop legkisebb eleme: 56
+A(z) 4. oszlop legkisebb eleme: 78
+A(z) 1. sor legnagyobb eleme: 78
+A(z) 2. sor legnagyobb eleme: 89
+A(z) 3. sor legnagyobb eleme: 90
+A(z) 1. oszlop legnagyobb eleme: 34
+A(z) 2. oszlop legnagyobb eleme: 56
+A(z) 3. oszlop legnagyobb eleme: 78
+A(z) 4. oszlop legnagyobb eleme: 90
+A mátrix legkisebb eleme: 12
+A mátrix legnagyobb eleme: 90
+A mátrix 90 fokkal jobbra forgatva: 
+Sikertelen
+A mátrix 90 fokkal balra forgatva: 
+Sikertelen
+A mátrix minden páros elemét felezze el, valamint minden páratlan eleméhez adjon hozzá 3-at. Ezt addig ismételje, amíg minden eleme 1 nem lesz: 
+1 1 1 1 
+1 1 1 1 
+1 1 1 1 
+
+```
+
+`out2.txt`
+```
+A(z) 1. sor legkisebb eleme: 12
+A(z) 2. sor legkisebb eleme: 23
+A(z) 1. oszlop legkisebb eleme: 45
+A(z) 2. oszlop legkisebb eleme: 67
+A(z) 3. oszlop legkisebb eleme: 89
+A(z) 4. oszlop legkisebb eleme: 12
+A(z) 5. oszlop legkisebb eleme: 34
+A(z) 1. sor legnagyobb eleme: 89
+A(z) 2. sor legnagyobb eleme: 90
+A(z) 1. oszlop legnagyobb eleme: 56
+A(z) 2. oszlop legnagyobb eleme: 78
+A(z) 3. oszlop legnagyobb eleme: 90
+A(z) 4. oszlop legnagyobb eleme: 23
+A(z) 5. oszlop legnagyobb eleme: 45
+A mátrix legkisebb eleme: 12
+A mátrix legnagyobb eleme: 90
+A mátrix 90 fokkal jobbra forgatva: 
+Sikertelen
+A mátrix 90 fokkal balra forgatva: 
+Sikertelen
+A mátrix minden páros elemét felezze el, valamint minden páratlan eleméhez adjon hozzá 3-at. Ezt addig ismételje, amíg minden eleme 1 nem lesz: 
+1 1 1 1 1 
+1 1 1 1 1 
+
+```
+
+`out3.txt`
+```
+A(z) 1. sor legkisebb eleme: 12
+A(z) 2. sor legkisebb eleme: 23
+A(z) 3. sor legkisebb eleme: 12
+A(z) 4. sor legkisebb eleme: 56
+A(z) 1. oszlop legkisebb eleme: 56
+A(z) 2. oszlop legkisebb eleme: 23
+A(z) 3. oszlop legkisebb eleme: 12
+A(z) 1. sor legnagyobb eleme: 90
+A(z) 2. sor legnagyobb eleme: 89
+A(z) 3. sor legnagyobb eleme: 89
+A(z) 4. sor legnagyobb eleme: 90
+A(z) 1. oszlop legnagyobb eleme: 89
+A(z) 2. oszlop legnagyobb eleme: 90
+A(z) 3. oszlop legnagyobb eleme: 90
+A mátrix legkisebb eleme: 12
+A mátrix legnagyobb eleme: 90
+A mátrix 90 fokkal jobbra forgatva: 
+Sikertelen
+A mátrix 90 fokkal balra forgatva: 
+Sikertelen
+A mátrix minden páros elemét felezze el, valamint minden páratlan eleméhez adjon hozzá 3-at. Ezt addig ismételje, amíg minden eleme 1 nem lesz: 
+1 1 1 
+1 1 1 
+1 1 1 
+1 1 1 
+
+```
+
+`out4.txt`
+```
+A(z) 1. sor legkisebb eleme: 1
+A(z) 2. sor legkisebb eleme: 1
+A(z) 3. sor legkisebb eleme: 3
+A(z) 4. sor legkisebb eleme: 7
+A(z) 1. oszlop legkisebb eleme: 1
+A(z) 2. oszlop legkisebb eleme: 1
+A(z) 3. oszlop legkisebb eleme: 2
+A(z) 4. oszlop legkisebb eleme: 4
+A(z) 1. sor legnagyobb eleme: 4
+A(z) 2. sor legnagyobb eleme: 12
+A(z) 3. sor legnagyobb eleme: 11
+A(z) 4. sor legnagyobb eleme: 10
+A(z) 1. oszlop legnagyobb eleme: 12
+A(z) 2. oszlop legnagyobb eleme: 9
+A(z) 3. oszlop legnagyobb eleme: 8
+A(z) 4. oszlop legnagyobb eleme: 7
+A mátrix legkisebb eleme: 1
+A mátrix legnagyobb eleme: 12
+A mátrix 90 fokkal jobbra forgatva: 
+10 11 12 1 
+9 4 1 2 
+8 3 2 3 
+7 6 5 4 
+A mátrix 90 fokkal balra forgatva: 
+1 2 3 4 
+12 1 2 5 
+11 4 3 6 
+10 9 8 7 
+A mátrix minden páros elemét felezze el, valamint minden páratlan eleméhez adjon hozzá 3-at. Ezt addig ismételje, amíg minden eleme 1 nem lesz: 
+1 1 1 1 
+1 1 1 1 
+1 1 1 1 
+1 1 1 1 
+
+```
+
+`out5.txt`
+```
+A(z) 1. sor legkisebb eleme: 1
+A(z) 2. sor legkisebb eleme: 4
+A(z) 3. sor legkisebb eleme: 1
+A(z) 1. oszlop legkisebb eleme: 1
+A(z) 2. oszlop legkisebb eleme: 2
+A(z) 3. oszlop legkisebb eleme: 3
+A(z) 1. sor legnagyobb eleme: 3
+A(z) 2. sor legnagyobb eleme: 16
+A(z) 3. sor legnagyobb eleme: 3
+A(z) 1. oszlop legnagyobb eleme: 4
+A(z) 2. oszlop legnagyobb eleme: 5
+A(z) 3. oszlop legnagyobb eleme: 16
+A mátrix legkisebb eleme: 1
+A mátrix legnagyobb eleme: 16
+A mátrix 90 fokkal jobbra forgatva: 
+1 2 1 
+4 5 16 
+3 2 3 
+A mátrix 90 fokkal balra forgatva: 
+1 2 3 
+4 5 16 
+1 2 3 
+A mátrix minden páros elemét felezze el, valamint minden páratlan eleméhez adjon hozzá 3-at. Ezt addig ismételje, amíg minden eleme 1 nem lesz: 
+1 1 1 
+1 1 1 
+1 1 1 
+
+```
+</details>
+
+## F feladat
+
+Írd meg a következő függvényeket rekurzívan:
+* Kiszámolja egy vektor elemeinek összegét
+* Megfordítja egy mondatban (string) a szavak sorrendjét
+* Megállapítja egy stringről, hogy palindrom-e

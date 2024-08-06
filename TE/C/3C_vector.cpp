@@ -47,6 +47,10 @@ int main() {
     vector<vector<int>> matrix(n, vector<int>(n));
 
     for(int i = 0; i < n; i++) {
+        matrix.push_back(vector<int>(n));
+    }
+
+    for(int i = 0; i < n; i++) {
         for(int j = 0; j < n; j++) {
             matrix.at(i).at(j) = rand() % 90 + 10;
         }

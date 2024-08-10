@@ -181,7 +181,7 @@ Az `inp#.txt` file első sora két számot tartalmaz (N,M), a mátrix dimenziói
 
 Minden feladat eredményét mondat formájában írd ki az `out#.txt` fileba.
 
-<details> <summary>  </summary>
+<details> <summary> </summary>
 
 `inp1.txt`
 ```
@@ -383,9 +383,24 @@ A mátrix minden páros elemét felezze el, valamint minden páratlan eleméhez 
 ```
 </details>
 
+
+
+
 ## F feladat
 
+> [!TIP]  
+> _Rekurzió alkalmazása:_  
+> 
+> 1. Mi a lehető legegyértelműbb eset?  
+>       `pl. sum(0)=0`
+> 2. Nézzünk meg több esetet, és találjunk összefüggéseket
+> 3. A komplikált eseteket vezessük vissza egyszerűbbekre  
+>       `pl. ha tudjuk, hogy mennyi sum(255), ebből könnyen kiszámolható sum(256)`
+> 4. Az összefüggések/minta általánosítása
+> 5. Kód megírása az összefüggések és alapeset alapján
+
 Írd meg a következő függvényeket rekurzívan:
-* Kiszámolja egy vektor elemeinek összegét
-* Megfordítja egy mondatban (string) a szavak sorrendjét
-* Megállapítja egy stringről, hogy palindrom-e
++ Kiszámolja egy adott n számig a számok összegét `(pl sum(5) = 1+2+3+4+5 = 15)`
++ Kiszámolja egy vektor elemeinek összegét `(pl vecSum([1,3,5,2,7] = 1+3+5+2+7 = 18)`
++ Megállapítja egy stringről, hogy palindrom-e `pl palindrom("anni tejet inna") = true)`
++ Megfordítja egy mondatban (string) a szavak sorrendjét `(pl reverse("van alma a fán") = "fán a alma van")`

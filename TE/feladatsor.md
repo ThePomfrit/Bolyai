@@ -400,7 +400,19 @@ A mátrix minden páros elemét felezze el, valamint minden páratlan eleméhez 
 > 5. Kód megírása az összefüggések és alapeset alapján
 
 Írd meg a következő függvényeket rekurzívan:
-+ Kiszámolja egy adott n számig a számok összegét `(pl sum(5) = 1+2+3+4+5 = 15)`
-+ Kiszámolja egy vektor elemeinek összegét `(pl vecSum([1,3,5,2,7] = 1+3+5+2+7 = 18)`
-+ Megállapítja egy stringről, hogy palindrom-e `pl palindrom("anni tejet inna") = true)`
-+ Megfordítja egy mondatban (string) a szavak sorrendjét `(pl reverse("van alma a fán") = "fán a alma van")`
++ Kiszámolja egy adott `n` számig a számok összegét 
+    `sum(5) = 1+2+3+4+5 = 15`
++ Kiszámolja egy vektor elemeinek összegét 
+    `vecSum([1,3,5,2,7] = 1+3+5+2+7 = 18`
++ Megkeresi egy vektor legkisebb elemét 
+    `min([3,5,2,6,1,3] = 1)`
++ Megállapítja egy `string`ről, hogy palindrom-e 
+    `palindrom("anni tejet inna") = true)`
++ Összeadja a páros számokat egy vektorban 
+    `sumEven([2,5,4,1,6,3,2] = 14)`
++ Összeadja a számokat egy vektorban, amíg páratlan számba nem ütközik 
+    `sumUntilOdd([2,5,4,1,6,3,2]) = 2`
++ Megszámolja, hogy egy string milyen hosszú 
+    `strLen("anni tejet inna") = 15`
++ Megszámolja, hogy egy stringben hány magánhangzó van 
+    `countVowels("anni tejet inna") = 6`

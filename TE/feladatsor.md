@@ -431,7 +431,7 @@ A mátrix minden páros elemét felezze el, valamint minden páratlan eleméhez 
 
     ---
 + Megkeresi egy vektor legkisebb elemét 
-    `min({2,4,6,3,8,1}) = 1`
+    `findMin({2,4,6,3,8,1}) = 1`
 + Kiszámolja egy vektor elemeinek összegét 
     `vecSum({2,4,6,3,8,1}) = 2+4+6+3+8+1 = 24`
 + Összeadja a páros számokat egy vektorban 
@@ -444,8 +444,6 @@ A mátrix minden páros elemét felezze el, valamint minden páratlan eleméhez 
     `lastEvenNumber({2,4,6,3,8,1}) = 8`
 + Megkeresi egy vektorban az első páros számot
     `firstEvenNumber({2,4,6,3,8,1}) = 2`
-+ Megkeresi egy vektorban az `n.` páros számot
-    `nthEvenNumber({2,4,6,3,8,1}, 4) = 8`
 + Két vektorról megállapítja, hogy azok egyformák-e
     `equals({2,4,6,3,8,1}, {2,4,6,3,8,1}) = true`
 
@@ -457,7 +455,7 @@ A mátrix minden páros elemét felezze el, valamint minden páratlan eleméhez 
 + Megszámolja, hogy egy stringben hány magánhangzó van 
     `countVowels("anni tejet inna") = 6`
 + Megállapítja egy számsorozatról, hogy az bináris szám-e
-    `isBinary("1000101101011) = true`
+    `isBinary("1000101101011") = true`
 + Megállapítja két `string`ről, hogy egyformák-e
     `equals("anni tejet inna", "anni tejet iszik") = false`
 + Leellenőrzi, hogy egy `string`ben, ami nyitó és csukó zárójelekből áll, helyesen van-e zárójelezve.
@@ -473,3 +471,4 @@ A mátrix minden páros elemét felezze el, valamint minden páratlan eleméhez 
 + Egy rendezett vektorban megkeres egy elemet a bináris keresés segítségével
     `binSearch({1 3 4 8 9 11 12 15 17 21}, 2) = -1`
     `binSearch({1 3 4 8 9 11 12 15 17 21}, 4) = 2`
++ Kiszámolja, hogy 

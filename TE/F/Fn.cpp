@@ -143,6 +143,14 @@ int greatestDigit(int n) {
 }
 
 int lastEvenDigit(int n) {
+    if (n < 10) {
+        if (n % 2 == 0) {
+            return n;
+        } else {
+            return -1;
+        }
+    }
+    return lastEvenDigit(n / 10);
     
 }
 

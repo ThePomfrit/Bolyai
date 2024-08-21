@@ -411,41 +411,65 @@ A mátrix minden páros elemét felezze el, valamint minden páratlan eleméhez 
   $ a_n=a_{n-1}*q $
     `geometricProgression53(5) = 20`
 + Kiszámolja egy mértani sorozat `n.` elemét, ha a sorozat első eleme és hányadosa is paraméterként van megadva.
-    `geometricProgression53(5,3,5) = 20`
+    `geometricProgression(5,3,5) = 20`
 + Kiszámolja `n` szám faktoriálisát.
     `factorial(4) = 1*2*3*4 = 24`
 + Kiszámolja `2` `n.` hatványát.
     `twoToThePower(4) = 16`
 + Kiszámolja egy adott szám `n.` hatványát.
     `toThePowerOf(2,4) = 16`
-+ Kiszámolja a Fibonacci sorozat `n.` elemét.
-    `fibonacci(6) = 8`
 + Kiszámolja két szám szorzatát (* operátor hasznalata nelkül)
     `product(7,8) = 42`
 + Kiszámolja az összes páratlan szám összegét két adott szám közt
     `sumOddInRange(5,14) = 5+7+9+11+13 = 45`
-+ `/*nem rekurzívan*/` Megadja egy adott számig az összes prímet
-    `findPrimesUntil(7) = {2,3,5,7}`
-+ Megállapítja egy számról, hogy prímszám-e
-    `isPrime(7) = true`
-+ Feloszt egy számot prímtényezőire
-    `primeFactors(60) = {2,3,3,5}`
-+ Kiszámolja az összes prímszámot két adott szám közt
-    `sumPrimesInRange(3,20) = 3+5+7+11+13+17+19 = 75`
++ Kiszámolja a Fibonacci sorozat `n.` elemét.
+    `fibonacci(6) = 8`
++ Visszaadja egy szám legnagyobb számjegyét
+    `greatestDigit(85634287) = 8`
++ Visszaadja egy szám utolsó páros számjegyét
+    `lastEvenDigit(85634287) = 8`
 
+    ---
++ Megkeresi egy vektor legkisebb elemét 
+    `min({2,4,6,3,8,1}) = 1`
 + Kiszámolja egy vektor elemeinek összegét 
-    `vecSum({2,4,6,3,8,1} = 2+4+6+3+8+1 = 24`
+    `vecSum({2,4,6,3,8,1}) = 2+4+6+3+8+1 = 24`
++ Összeadja a páros számokat egy vektorban 
+    `sumEven({2,4,6,3,8,1}) = 20`
 + Megszámolja, hogy egy vektorban hány darab van egy adott számból
     `countNs({2,4,6,3,8,1}, 8) = 1`
-+ Megkeresi egy vektor legkisebb elemét 
-    `min({2,4,6,3,8,1} = 1)`
-+ Összeadja a páros számokat egy vektorban 
-    `sumEven({2,4,6,3,8,1} = 20)`
 + Összeadja a számokat egy vektorban, amíg páratlan számba nem ütközik 
     `sumUntilOdd({2,4,6,3,8,1}) = 12`
-+ Megállapítja egy `string`ről, hogy palindrom-e 
-    `palindrom("anni tejet inna") = true)`
++ Megkeresi egy vektorban az utolsó páros számot
+    `lastEvenNumber({2,4,6,3,8,1}) = 8`
++ Megkeresi egy vektorban az első páros számot
+    `firstEvenNumber({2,4,6,3,8,1}) = 2`
++ Megkeresi egy vektorban az `n.` páros számot
+    `nthEvenNumber({2,4,6,3,8,1}, 4) = 8`
++ Két vektorról megállapítja, hogy azok egyformák-e
+    `equals({2,4,6,3,8,1}, {2,4,6,3,8,1}) = true`
+
+    ---
 + Megszámolja, hogy egy string milyen hosszú 
     `strLen("anni tejet inna") = 15`
++ Megállapítja egy `string`ről, hogy palindrom-e 
+    `palindrom("anni tejet inna") = true`
 + Megszámolja, hogy egy stringben hány magánhangzó van 
     `countVowels("anni tejet inna") = 6`
++ Megállapítja egy számsorozatról, hogy az bináris szám-e
+    `isBinary("1000101101011) = true`
++ Megállapítja két `string`ről, hogy egyformák-e
+    `equals("anni tejet inna", "anni tejet iszik") = false`
++ Leellenőrzi, hogy egy `string`ben, ami nyitó és csukó zárójelekből áll, helyesen van-e zárójelezve.
+    `checkParentheses("[[][[[]][]]][][][[]]") = true`
+    `checkParentheses("[[]][][[][][[[][]][]]") = false`
+    `checkParenthese("[[[[[[[[[") = false`
+
+    ---
++ Az Euklidészi algoritmus segítségével megkeresi két szám legnagyobb közös osztóját
+    `euclid(184,100) = 4`
++ Rendezi a vektort a merge sort használatával
+    `mergeSort({2,4,6,3,8,1}); v = {1,2,3,4,6,8}`
++ Egy rendezett vektorban megkeres egy elemet a bináris keresés segítségével
+    `binSearch({1 3 4 8 9 11 12 15 17 21}, 2) = -1`
+    `binSearch({1 3 4 8 9 11 12 15 17 21}, 4) = 2`

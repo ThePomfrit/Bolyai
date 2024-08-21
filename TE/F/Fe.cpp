@@ -36,7 +36,6 @@
 #include <vector>
 #include <string>
 #include <set>
-#include <math.h>
 
 using namespace std;
 
@@ -104,16 +103,6 @@ int toThePowerOf(int a, int n) {
     }
 }
 
-int fibonacci(int n) {
-    if (n == 0) {
-        return 0;
-    } else if (n == 1) {
-        return 1;
-    } else {
-        return fibonacci(n-1) + fibonacci(n-2);
-    }
-}
-
 int product(int a, int b) {
     if (b == 0) {
         return 0;
@@ -134,68 +123,40 @@ int sumOddInRange(int a, int b) {
     }
 }
 
-vector<int> findPrimesUntil(int n) {
-    //not recursive
-    vector<int> primes;
-    for (int i = 2; i <= n; i++) {
-        bool isPrime = true;
-        for (int j = 2; j < i; j++) {
-            if (i % j == 0) {
-                isPrime = false;
+bool isPrime(int n) {
+    vector<int> primes = {2};
+    for(int i = 3; i < n; i++) {
+        for(int j = 0; j < primes.size(); j++) {
+            if (i % primes[j] == 0) {
                 break;
+            } else if (j == primes.size() - 1) {
+                primes.push_back(i);
             }
         }
-        if (isPrime) {
-            primes.push_back(i);
-        }
     }
-}
-
-bool isPrime(int n) {
-    if (n < 2) {
-        return false;
-    }
-    if (n == 2) {
-        return true;
-    }
-    if (n % 2 == 0) {
-        return false;
-    }
-    vector<int> primes = findPrimesUntil(sqrt(n));
-    for (int i = 0; i < primes.size(); i++) {
-        if (n % primes[i] == 0) {
-            return false;
-        }
-    }
-}
-
-vector<int> primeFactorHelper(int n, vector<int> primes) {
-    
 
 }
 
-
-vector<int> primeFactors(int n) {
-    vector<int> factors;
-    factors.push_back(1);
-    factors.push_back(n);
+vector<int> findPrimesUntil(int n) {
+    if(n < 2) {
+        return {};
+    }
+    if(n == 2) {
+        return {2};
+    }
     if(isPrime(n)) {
-        return factors;
-    } 
-    //recursive
-    return primeFactorHelper(n, findPrimesUntil(sqrt(n)));
-
+        vector<int> primes = findPrimesUntil(n-1);
+        primes.push_back(n);
+        return primes;
+    }
+    return findPrimesUntil(n-1);
 }
-
-    
-
 
 int vecSum(vector<int> v) {
     if (v.size() == 0) {
         return 0;
     } else {
-        int sum = 0;
-        sum += v[0];
+        int sum = v[0];
         v.erase(v.begin());
         return sum + vecSum(v);
     }
@@ -225,6 +186,19 @@ int sumEven(vector<int> v) {
         }
         v.erase(v.begin());
         return sum + sumEven(v);
+    }
+}
+
+int countNs(vector<int> v, int n) {
+    if (v.size() == 0) {
+        return 0;
+    } else {
+        int count = 0;
+        if (v[0] == n) {
+            count++;
+        }
+        v.erase(v.begin());
+        return count + countNs(v, n);
     }
 }
 
@@ -280,15 +254,70 @@ int countVowels(string s) {
     }
 }
 
-int fibonacci(int n) {
+uint fibonacci(uint n) {
     if (n == 0) {
         return 0;
-    } else if (n == 1) {
+    } 
+    if (n == 1) {
         return 1;
-    } else {
-        return fibonacci(n-1) + fibonacci(n-2);
+    } 
+    return (fibonacci(n-1) + fibonacci(n-2));
+}
+
+int euclid(int a, int b) {
+    if(a < b) {
+        return euclid(b, a);
+    }
+    if(a % b == 0) {
+        return b;
+    }
+    return euclid(b, a % b);
+}
+
+void merge(vector<int> &v, int s, int m, int e) {
+    vector<int> left(v.begin() + s, v.begin() + m + 1);
+    vector<int> right(v.begin() + m + 1, v.begin() + e + 1);
+    int i = 0;
+    int j = 0;
+    int k = s;
+    while (i < left.size() && j < right.size()) {
+        if (left[i] < right[j]) {
+            v[k] = left[i];
+            i++;
+        } else {
+            v[k] = right[j];
+            j++;
+        }
+        k++;
+    }
+    while (i < left.size()) {
+        v[k] = left[i];
+        i++;
+        k++;
+    }
+    while (j < right.size()) {
+        v[k] = right[j];
+        j++;
+        k++;
     }
 }
+
+void mergeSort(vector<int> &v, int s, int e) {
+    if (s < e) {
+        int m = (s + e) / 2;
+        mergeSort(v, s, m);
+        mergeSort(v, m+1, e);
+        merge(v, s, m, e);
+    }
+}
+
+void printVector(vector<int> v) {
+    for (int i = 0; i < v.size(); i++) {
+        cout << v[i] << " ";
+    }
+    cout << endl;
+}
+
 
 int main() {
     vector<int> v = {2,4,6,3,8,1};
@@ -299,21 +328,32 @@ int main() {
     cout <<  "  arithmeticProgression(n,7,3) =  " << arithmeticProgression(5,7,3) << endl;
     cout <<  "     geometricProgression53(n) =  " << geometricProgression53(5) << endl;
     cout <<  "   geometricProgression(n,5,3) =  " << geometricProgression(5,5,3) << endl;
-    
+    cout <<  "                  factorial(n) =  " << factorial(5) << endl;
+    cout <<  "            twoToThePowerOf(n) =  " << twoToThePowerOf(5) << endl;
+    cout <<  "             toThePowerOf(2,n) =  " << toThePowerOf(2,5) << endl;
+    cout <<  "                  product(7,8) =  " << product(7,8) << endl;
+    cout <<  "           sumOddInRange(5,14) =  " << sumOddInRange(5,14) << endl;
+    cout <<  "                 fibonacci(10) =  " << fibonacci(10) << endl;
+
     cout << endl;
     cout <<  "====================== v = {2,4,6,3,8,1} ======================" << endl;
     cout <<  "                        min(v) =  " << min(v) << endl;
     cout <<  "                     vecSum(v) =  " << vecSum(v) << endl;
     cout <<  "                    sumEven(v) =  " << sumEven(v) << endl;
+    cout <<  "                 countNs(v, 8) =  " << countNs(v, 8) << endl;
     cout <<  "                sumUntilOdd(v) =  " << sumUntilOdd(v) << endl;
+    
     cout << endl;
     cout <<  "==================== s = \"anni tejet inna\" ====================" << endl;
     cout <<  "                     strLen(s) =  " << strLen(s) << endl;
     cout <<  "                  palindrom(s) =  " << palindrom(s) << endl;
     cout <<  "                countVowels(s) =  " << countVowels(s) << endl;
+    
     cout << endl;
     cout <<  "===============================================================" << endl;
-    cout <<  "                  euclid(6,10) =  " << euclid(6,10) << endl;
-    cout <<  "                 fibonacci(10) =  " << fibonacci(10) << endl;
+    cout <<  "               euclid(100,184) =  " << euclid(100,184) << endl;
+    mergeSort(v,0,5);
+    cout <<  "              mergeSort(v,0,5) =  ";
+    printVector(v);
     return 0;
 }

@@ -229,8 +229,5 @@ int main() {
     halfAndAdd(matrix);
     o << "A mátrix minden páros elemét felezze el, valamint minden páratlan eleméhez adjon hozzá 3-at. Ezt addig ismételje, amíg minden eleme 1 nem lesz: " << endl;
     o << matrixToString(matrix);
-
-
-
     
 }

@@ -399,76 +399,75 @@ A mátrix minden páros elemét felezze el, valamint minden páratlan eleméhez 
 > 4. Az összefüggések/minta általánosítása
 > 5. Kód megírása az összefüggések és alapeset alapján
 
-Írd meg a következő függvényeket rekurzívan:
-+ Kiszámolja egy adott `n` számig a számok összegét 
+Írd meg a következő függvényeket rekurzívan:  
++ Kiszámolja egy adott `n` számig a számok összegét   
     `sum(5) = 1+2+3+4+5 = 15`
-+ Kiszámolja egy számtani sorozat `n.` elemét, ha a sorozat első eleme 7, a különbsége pedig 3. 
-  $ a_{n}=a_{n-1}+d $
++ Kiszámolja egy számtani sorozat `n.` elemét, ha a sorozat első eleme 7, a különbsége pedig 3.   
+  $ a_{n}=a_{n-1}+d $  
     `arithmeticProgression73(5) = 19`
-+ Kiszámolja egy számtani sorozat `n.` elemét, ha a sorozat első eleme és különbsége is paraméterként van megadva.
++ Kiszámolja egy számtani sorozat `n.` elemét, ha a sorozat első eleme és különbsége is paraméterként van megadva.  
     `arithmeticProgression(5,7,3) = 19`
-+ Kiszámolja egy mértani sorozat `n.` elemét, ha a sorozat első eleme 5, hányadosa pedig 3.
-  $ a_n=a_{n-1}*q $
++ Kiszámolja egy mértani sorozat `n.` elemét, ha a sorozat első eleme 5, hányadosa pedig 3.  
+  $ a_n=a_{n-1}*q $  
     `geometricProgression53(5) = 20`
-+ Kiszámolja egy mértani sorozat `n.` elemét, ha a sorozat első eleme és hányadosa is paraméterként van megadva.
++ Kiszámolja egy mértani sorozat `n.` elemét, ha a sorozat első eleme és hányadosa is paraméterként van megadva.  
     `geometricProgression(5,3,5) = 20`
-+ Kiszámolja `n` szám faktoriálisát.
++ Kiszámolja `n` szám faktoriálisát.  
     `factorial(4) = 1*2*3*4 = 24`
-+ Kiszámolja `2` `n.` hatványát.
++ Kiszámolja `2` `n.` hatványát.  
     `twoToThePower(4) = 16`
-+ Kiszámolja egy adott szám `n.` hatványát.
++ Kiszámolja egy adott szám `n.` hatványát.  
     `toThePowerOf(2,4) = 16`
-+ Kiszámolja két szám szorzatát (* operátor hasznalata nelkül)
++ Kiszámolja két szám szorzatát (* operátor hasznalata nelkül)  
     `product(7,8) = 42`
-+ Kiszámolja az összes páratlan szám összegét két adott szám közt
++ Kiszámolja az összes páratlan szám összegét két adott szám közt  
     `sumOddInRange(5,14) = 5+7+9+11+13 = 45`
-+ Kiszámolja a Fibonacci sorozat `n.` elemét.
++ Kiszámolja a Fibonacci sorozat `n.` elemét.  
     `fibonacci(6) = 8`
-+ Visszaadja egy szám legnagyobb számjegyét
++ Visszaadja egy szám legnagyobb számjegyét  
     `greatestDigit(85634287) = 8`
-+ Visszaadja egy szám utolsó páros számjegyét
++ Visszaadja egy szám utolsó páros számjegyét  
     `lastEvenDigit(85634287) = 8`
 
     ---
-+ Megkeresi egy vektor legkisebb elemét 
++ Megkeresi egy vektor legkisebb elemét  
     `findMin({2,4,6,3,8,1}) = 1`
-+ Kiszámolja egy vektor elemeinek összegét 
++ Kiszámolja egy vektor elemeinek összegét   
     `vecSum({2,4,6,3,8,1}) = 2+4+6+3+8+1 = 24`
-+ Összeadja a páros számokat egy vektorban 
++ Összeadja a páros számokat egy vektorban   
     `sumEven({2,4,6,3,8,1}) = 20`
-+ Megszámolja, hogy egy vektorban hány darab van egy adott számból
++ Megszámolja, hogy egy vektorban hány darab van egy adott számból  
     `countNs({2,4,6,3,8,1}, 8) = 1`
-+ Összeadja a számokat egy vektorban, amíg páratlan számba nem ütközik 
++ Összeadja a számokat egy vektorban, amíg páratlan számba nem ütközik  
     `sumUntilOdd({2,4,6,3,8,1}) = 12`
-+ Megkeresi egy vektorban az utolsó páros számot
++ Megkeresi egy vektorban az utolsó páros számot  
     `lastEvenNumber({2,4,6,3,8,1}) = 8`
-+ Megkeresi egy vektorban az első páros számot
++ Megkeresi egy vektorban az első páros számot  
     `firstEvenNumber({2,4,6,3,8,1}) = 2`
-+ Két vektorról megállapítja, hogy azok egyformák-e
++ Két vektorról megállapítja, hogy azok egyformák-e  
     `equals({2,4,6,3,8,1}, {2,4,6,3,8,1}) = true`
 
     ---
-+ Megszámolja, hogy egy string milyen hosszú 
++ Megszámolja, hogy egy string milyen hosszú   
     `strLen("anni tejet inna") = 15`
-+ Megállapítja egy `string`ről, hogy palindrom-e 
++ Megállapítja egy `string`ről, hogy palindrom-e   
     `palindrom("anni tejet inna") = true`
-+ Megszámolja, hogy egy stringben hány magánhangzó van 
++ Megszámolja, hogy egy stringben hány magánhangzó van   
     `countVowels("anni tejet inna") = 6`
-+ Megállapítja egy számsorozatról, hogy az bináris szám-e
++ Megállapítja egy számsorozatról, hogy az bináris szám-e  
     `isBinary("1000101101011") = true`
-+ Megállapítja két `string`ről, hogy egyformák-e
++ Megállapítja két `string`ről, hogy egyformák-e  
     `equals("anni tejet inna", "anni tejet iszik") = false`
-+ Leellenőrzi, hogy egy `string`ben, ami nyitó és csukó zárójelekből áll, helyesen van-e zárójelezve.
-    `checkParentheses("[[][[[]][]]][][][[]]") = true`
-    `checkParentheses("[[]][][[][][[[][]][]]") = false`
++ Leellenőrzi, hogy egy `string`ben, ami nyitó és csukó zárójelekből áll, helyesen van-e zárójelezve.  
+    `checkParentheses("[[][[[]][]]][][][[]]") = true`  
+    `checkParentheses("[[]][][[][][[[][]][]]") = false`  
     `checkParenthese("[[[[[[[[[") = false`
 
     ---
-+ Az Euklidészi algoritmus segítségével megkeresi két szám legnagyobb közös osztóját
++ Az Euklidészi algoritmus segítségével megkeresi két szám legnagyobb közös osztóját  
     `euclid(184,100) = 4`
-+ Rendezi a vektort a merge sort használatával
++ Rendezi a vektort a merge sort használatával  
     `mergeSort({2,4,6,3,8,1}); v = {1,2,3,4,6,8}`
-+ Egy rendezett vektorban megkeres egy elemet a bináris keresés segítségével
-    `binSearch({1 3 4 8 9 11 12 15 17 21}, 2) = -1`
-    `binSearch({1 3 4 8 9 11 12 15 17 21}, 4) = 2`
-+ Kiszámolja, hogy 
++ Egy rendezett vektorban megkeres egy elemet a bináris keresés segítségével  
+    `binSearch({1 3 4 8 9 11 12 15 17 21}, 2) = -1`  
+    `binSearch({1 3 4 8 9 11 12 15 17 21}, 4) = 2`  
